@@ -1,0 +1,186 @@
+body{
+background-color: #ffff;
+margin: 0px;
+padding: 0px;
+}
+.form-area{
+padding-bottom: 100px;
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+background-color: #04073b;
+margin: 50px;
+border-radius: 20px;
+box-shadow:#040735 2px 5px 5px 5px;
+}
+.form-area .form-text-side{
+margin: 10px;
+padding: 10px;
+}
+.form-area .form-text-side h1{
+color: rgb(238, 52, 52);
+font-size: 150px;
+text-align: center;
+}
+.form-area .form-text-side h2{
+color: #ffff;
+font-size: 50px;
+text-transform: uppercase;
+text-align: center;
+font-weight: 600;
+font-family: 'Roboto', sans-serif;
+}
+.form-area .form-text-side h3{
+ color: hsl(0, 100%, 98%);
+ font-size: 30px;
+ text-transform: capitalize;
+ text-align: center;
+ font-weight: 500;
+font-family:'Ubuntu', sans-serif;
+}
+.form-area .form-text-side button{
+margin-top: 50px;
+  color: hsl(0, 100%, 98%);
+ font-size: 20px;
+  text-transform: uppercase;
+   text-align: center;
+   font-weight: 400;
+   background-color:#1356e8;
+   margin-left: 50px;
+   margin-right: 50px;
+   padding-top: 10px;
+   padding-right: 20px;
+   padding-left: 20px;
+   padding-bottom: 10px;
+   border-radius: 20px;
+  font-family:'Ubuntu', sans-serif;
+  border: none;
+ }
+ .form-area .form-text-side button:hover{
+transition: 1s;
+color: rgb(50, 110, 240);
+background-color: #fff;
+ }
+
+.form-area .form-input-side{
+justify-content: center;
+justify-items: center;
+background-color: #ffff;
+margin: 10px;
+border: none;
+padding: 10px;
+border-radius: 200px 10px 50px;
+justify-content: center;
+box-shadow: 2px 2px 4px 3px rgb(9, 3, 31);
+}
+.form-area .form-input-side form input{
+margin:10px;
+padding: 5px;
+padding-left: 10px;
+padding-top:10px ;
+padding-bottom: 10px;
+border:1px solid rgb(1, 14, 19);
+border-top: none;
+border-left: none;
+border-right: none;
+background-color: rgb(255, 255, 255);
+width: 400px;
+outline-style: none;
+font-family: sans-serif;
+font-size: 20px;
+color: rgb(5, 5, 15);
+}
+.form-area .form-input-side form h1{
+color: rgb(13, 6, 43);
+font-size: 100px;
+text-align: center;
+}
+.form-area .form-input-side form button{
+ margin-top: 50px;
+ color: hsl(0, 100%, 98%);
+ font-size: 20px;
+ text-transform: uppercase;
+text-align: center;
+ font-weight: 400;
+ padding-left: 150px;
+ padding-right: 150px;
+ padding-top: 10px;
+ padding-bottom:10px;
+ background-color:#1356e8;
+border-radius: 20px;
+font-family:'Ubuntu'sans-serif;
+ border: none;
+ margin-left: 150px;
+}
+.form-area .form-input-side button:hover{
+                    transition: 1s;
+                    color: rgb(50, 110, 240);
+                    background-color: #fff;
+                     }
+
+                     body{
+                                        animation-name: triangle;
+                                        animation-duration: 5s;
+                                        animation-timing-function: linear;
+                                        animation-delay: 5s;
+                                        animation-iteration-count:infinite;
+                                        animation-fill-mode: backwards;
+                                        animation-play-state: running;
+                    }
+                    @keyframes triangle{
+                                        0%{
+                                       background-color:#07277e;
+                                        }
+                                         50%{
+                                        background-color: #0f1b88;
+                                          
+                                         }
+                                         75%{
+                                                           background-color:#0e1a86;           
+                                         }
+                                       
+                                       100%{
+                                                           background-color:#072066;
+                                       }
+                                        
+                                       }
+@media (max-width:648px) {
+  .form-area .form-text-side h1{
+font-size: 90px;
+
+  }
+  .form-area .form-text-side h2{
+font-size: 30px;
+
+  }
+  .form-area .form-text-side h3{
+font-size: 20px;
+ 
+  }
+  .form-area .form-text-side button{
+font-size: 15px;
+padding-left: 2px;
+padding-right: 2px;
+  }
+  .form-area {
+margin: 7px;
+
+  }
+
+.form-area .form-input-side form input{
+font-size: 15x;
+width: 300px;
+}
+.form-area .form-input-side form h1{
+font-size: 80px;
+}
+.form-area .form-input-side form button{
+font-size: 20px;
+margin-left: 2px;
+
+}
+.form-area{
+  padding-bottom: 50px;
+  
+  
+}
+}
