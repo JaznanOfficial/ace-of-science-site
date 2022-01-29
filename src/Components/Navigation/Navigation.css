@@ -1,0 +1,20 @@
+.navbar, .dropdown-menu{
+    background-color: #00007C !important;
+}
+.navbar a{
+    color: white !important;
+    border-radius: 8px;
+    font-weight: 900;
+}
+.navbar a:hover{
+    background-color: white !important;
+    color: #00007C !important;
+}
+
+.dropdown-menu{
+    padding:5px !important;
+}
+
+.dropdown-toggle::after{
+    content: none !important;
+}
