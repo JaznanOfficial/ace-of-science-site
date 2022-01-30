@@ -25,11 +25,12 @@ const Navigation = () => {
             <Nav.Link href="#pricing">Blog</Nav.Link>
             <Nav.Link href="#pricing">About</Nav.Link>
             <Nav.Link href="#pricing">Contact</Nav.Link>
+            <Nav.Link href="#pricing">Log in</Nav.Link>
             <NavDropdown title={<i class="far fa-user-circle fs-5"></i>} id="collasible-nav-dropdown" className='p-0 border-2'>
               <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">My Subject</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Another topic</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Logout</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Log out</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

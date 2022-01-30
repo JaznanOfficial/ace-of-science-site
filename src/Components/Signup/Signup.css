@@ -1,9 +1,6 @@
-body{
-background-color: #071138;
-margin: 0px;
-padding: 0px;
-}
+
 .form{
+  background-color: #071138;
 margin: 20px;
 padding: 20px;
 display: grid;

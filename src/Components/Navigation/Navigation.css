@@ -1,15 +1,26 @@
-.navbar, .dropdown-menu{
-    background-color: #00007C !important;
+.dropdown-menu{
+    background: rgb(66,61,164);
+background: radial-gradient(circle, rgba(66,61,164,1) 0%, rgba(10,10,96,1) 100%);
+border: 1px solid white !important;
+}
+
+.dropdown-item{
+    margin: 0 !;
 }
 .navbar a{
     color: white !important;
     border-radius: 8px;
     font-weight: 900;
+    transition: 0.5s;
+    margin: 0 5px;
 }
 .navbar a:hover{
     background-color: white !important;
     color: #00007C !important;
+    
+    
 }
+
 
 .dropdown-menu{
     padding:5px !important;
