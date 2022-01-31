@@ -15,7 +15,7 @@ const HeaderBanner = () => {
                         <strong>KING,QUEEN AND JACK</strong> of sciences <br />
                         all are here! <br />
                     </h3>
-                    <h1 className="text-danger">Ace of Science!</h1>
+                    <h1 className="text-warning">Ace of Science!</h1>
                     <h3> yeahh...!</h3>
                     <Button variant="outline-warning" className="mt-3">
                         <h5>Let's begin</h5>
