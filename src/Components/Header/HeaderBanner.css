@@ -5,12 +5,13 @@
     font-weight: bolder;
 }
 .btn{
-    background-color: #F56962 !important;
+    background-color: #F56962!important;
     border: none !important;
 }
 
 
 .btn:hover {
-	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%) !important;
-	background-color:#FF6584 !important;
+	background-color:#fe1a00 !important;
+	/* background-color:#FF6584 !important; */
+    box-shadow: 2px 3px 15px #F56962;
 }

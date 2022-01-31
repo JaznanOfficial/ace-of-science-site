@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./Navigation.css";
 import siteLogo from "./ace-of-science.png";
 
@@ -24,7 +24,7 @@ const Navigation = () => {
                             <Nav.Link href="#pricing">Blog</Nav.Link>
                             <Nav.Link href="#pricing">About</Nav.Link>
                             <Nav.Link href="#pricing">Contact</Nav.Link>
-                            <Nav.Link href="#pricing">Log in</Nav.Link>
+                            <Button className="login">Log in</Button>
                             <NavDropdown
                                 title={<i class="far fa-user-circle fs-5"></i>}
                                 id="collasible-nav-dropdown"
