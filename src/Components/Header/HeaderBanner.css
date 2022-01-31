@@ -1,4 +1,16 @@
 .header{
-    
-height: 500px;
+    background-color: #FEF0EF;
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: xx-large !important;
+    font-weight: bolder;
+}
+.btn{
+    background-color: #F56962 !important;
+    border: none !important;
+}
+
+
+.btn:hover {
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%) !important;
+	background-color:#FF6584 !important;
 }
