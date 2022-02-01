@@ -6,7 +6,7 @@ import siteLogo from "./ace-of-science.png";
 const Navigation = () => {
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" variant="dark">
+            <Navbar collapseOnSelect expand="lg" variant="light">
                 <Container>
                     <img
                         src={siteLogo}

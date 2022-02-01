@@ -1,29 +1,57 @@
-.card-1{
-    background-color: #FEF3E8 !important;
+.col a {
+    text-decoration: none !important;
+    color: black;
 }
-.card-2{
-    background-color: #DDF7FF !important;
-}
-.card-3{
-    background-color: #E6FAEA !important;
+.col a:hover {
+    /* text-decoration: none !important; */
+    color: white;
 }
 
+.card:hover .image-div-1,
+.image-div-2,
+.image-div-3 {
+    background-color: white;
+}
 
-.image-div-1{
+.card-1 {
+    background-color: #fef3e8 !important;
+}
+.card-1:hover {
+    background-color: #fea04d !important;
+}
+.card-2 {
+    background-color: #ddf7ff !important;
+}
+.card-2:hover {
+    background-color: #3e75f6 !important;
+}
+.card-3 {
+    background-color: #e6faea !important;
+}
+.card-3:hover {
+    background-color: #4dfe9a !important;
+}
+
+.image-div-1 {
     width: 90px !important;
     height: 90px !important;
     border-radius: 50%;
-    background-color: #FAE0D0 !important;
+    background-color: #fae0d0 !important;
 }
-.image-div-2{
+.image-div-2 {
     width: 90px !important;
     height: 90px !important;
     border-radius: 50%;
-    background-color: #BBF0FF !important;
+    background-color: #bbf0ff !important;
 }
-.image-div-3{
+.image-div-3 {
     width: 90px !important;
     height: 90px !important;
     border-radius: 50%;
-    background-color: #CEF6D6 !important;
+    background-color: #cef6d6 !important;
 }
+
+/* <Card.Text className="fs-5">
+Learn your skill development topics with a lot of experienced
+and skilled teacher with fun and enjoy.
+</Card.Text> */
