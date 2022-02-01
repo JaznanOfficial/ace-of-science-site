@@ -1,0 +1,29 @@
+.card-1{
+    background-color: #FEF3E8 !important;
+}
+.card-2{
+    background-color: #DDF7FF !important;
+}
+.card-3{
+    background-color: #E6FAEA !important;
+}
+
+
+.image-div-1{
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 50%;
+    background-color: #FAE0D0 !important;
+}
+.image-div-2{
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 50%;
+    background-color: #BBF0FF !important;
+}
+.image-div-3{
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 50%;
+    background-color: #CEF6D6 !important;
+}

@@ -14,8 +14,10 @@ const Category = () => {
             </div>
             <Row xs={1} md={3} className="g-4">
                 <Col>
-                    <Card>
-                        <img src={book} alt="" width={48} className="ms-5 mt-3" />
+                    <Card className="card-1 rounded-3 border border-light">
+                    <div className="image-div-1 ms-3 mt-3 d-flex justify-content-center align-items-center">
+                    <img src={book} alt="" width={48} />
+                    </div>
                         <Card.Body className="text-start">
                             <Card.Title>
                                 <h3>Academic</h3>
@@ -29,8 +31,10 @@ const Category = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card>
-                        <img src={skill} alt="" width={48} className="ms-5 mt-3" />
+                    <Card className="card-2 rounded-3 border border-light">
+                    <div className="image-div-2 ms-3 mt-3 d-flex justify-content-center align-items-center">
+                    <img src={skill} alt="" width={48} />
+                    </div>
                         <Card.Body className="text-start">
                             <Card.Title>
                                 <h3>Skill Based</h3>
@@ -44,8 +48,10 @@ const Category = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card>
-                        <img src={hat} alt="" width={48} className="ms-5 mt-3" />
+                    <Card className="card-3 rounded-3 border border-light">
+                    <div className="image-div-3 ms-3 mt-3 d-flex justify-content-center align-items-center">
+                    <img src={hat} alt="" width={48} />
+                    </div>
                         <Card.Body className="text-start">
                             <Card.Title>
                                 <h3>Another</h3>
