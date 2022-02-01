@@ -1,7 +1,10 @@
+.magazine{
+  background-color: #EFEFF6;
+}
+
 .magazine-title{
     width: fit-content;
-    border: 2px outset #FFC107;
-    border-radius: 8px;
+    font-family: 'Ubuntu', sans-serif !important;
 }
 
 .swiper {
