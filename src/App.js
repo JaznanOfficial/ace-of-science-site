@@ -5,6 +5,7 @@ import HeaderBanner from './Components/Header/HeaderBanner';
 import MagazineSlider from './Components/MagazineSlider/MagazineSlider';
 import Category from './Components/Category/Category';
 import Achievement from './Components/Achievement/Achievement';
+import Testimonials from './Components/Testimonials/Testimonials';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Category></Category>
       <MagazineSlider></MagazineSlider>
       <Achievement></Achievement>
+      <Testimonials></Testimonials>
     </div>
   );
 }
