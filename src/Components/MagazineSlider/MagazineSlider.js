@@ -14,10 +14,10 @@ import { EffectCoverflow, Pagination } from "swiper";
 
 const MagazineSlider = () => {
     return (
-        <div className="my-3 magazine">
+        <div className="my-3 magazine py-5">
             <div className="container">
             <div className="container d-flex justify-content-center align-items-center">
-                <div className="magazine-title px-3 m-3 text-start">
+                <div className="magazine-title px-3 mb-3 text-start">
                     <h1>Latest Magazine</h1>
                 </div>
             </div>

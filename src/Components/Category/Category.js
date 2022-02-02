@@ -7,8 +7,8 @@ import hat from "./hat-icon.png";
 
 const Category = () => {
     return (
-        <div className="container my-5 py-5">
-            <div className="text-start">
+        <div className="container my-5">
+            <div className="text-start mb-4">
                 {" "}
                 <h1>Choice classes from categories</h1>
             </div>

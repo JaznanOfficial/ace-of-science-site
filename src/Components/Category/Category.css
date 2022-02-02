@@ -19,17 +19,27 @@
 .card-1:hover {
     background-color: #fea04d !important;
 }
+.card-1:hover .image-div-1 {
+    background-color: white !important;
+}
 .card-2 {
     background-color: #ddf7ff !important;
 }
 .card-2:hover {
     background-color: #3e75f6 !important;
 }
+.card-2:hover .image-div-2 {
+    background-color: white !important;
+}
 .card-3 {
     background-color: #e6faea !important;
 }
 .card-3:hover {
     background-color: #4dfe9a !important;
+}
+
+.card-3:hover .image-div-3 {
+    background-color: white !important;
 }
 
 .image-div-1 {
