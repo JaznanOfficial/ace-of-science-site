@@ -12,7 +12,7 @@ const HomePage = () => {
     return (
         <div>
             <ScrollToTop smooth color="#FE1A00" viewBox="0 0 250 250" />
-            <MessengerCustomerChat pageId="103023455276751" appId="1147330332685692" htmlRef="<REF_STRING>" />
+            <MessengerCustomerChat pageId="103023455276751" appId="1147330332685692" />
             <HeaderBanner></HeaderBanner>
             <Category></Category>
             <MagazineSlider></MagazineSlider>
