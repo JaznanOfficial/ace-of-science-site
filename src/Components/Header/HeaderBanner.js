@@ -6,6 +6,7 @@ import bannerImg from "./header-img.png";
 const HeaderBanner = () => {
     return (
         <div className="header py-3">
+            
             <div className="container d-lg-flex flex-row-reverse justify-content-between align-items-center">
                 <div>
                     <img src={bannerImg} alt="img not found" width="100%" />
@@ -20,6 +21,7 @@ const HeaderBanner = () => {
                     </Button>
                 </div>
             </div>
+            
         </div>
     );
 };
