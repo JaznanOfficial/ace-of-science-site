@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./Navigation.css";
 import siteLogo from "./ace-of-science.png";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
     return (
@@ -19,22 +20,27 @@ const Navigation = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav justify-content-between">
                         <Nav className="ms-auto justify-content-center align-items-center">
-                            <Nav.Link href="#features">Home</Nav.Link>
-                            <Nav.Link href="#pricing">Magazine</Nav.Link>
-                            <Nav.Link href="#pricing">Blog</Nav.Link>
-                            <Nav.Link href="#pricing">About</Nav.Link>
-                            <Nav.Link href="#pricing">Contact</Nav.Link>
-                            <Button className="login">Log in</Button>
+                            <Link to="/">Home</Link>
+                            <Link to="/magazine">Magazine</Link>
+                            <Link to="/blog">Blog</Link>
+                            <Link to="/about">About</Link>
+                            <Link to="contact">Contact</Link>
+                            <Link to="login">
+                                <Button className="login">Log in</Button>
+                            </Link>
                             <NavDropdown
                                 title={<i class="far fa-user-circle fs-5"></i>}
                                 id="collasible-nav-dropdown"
                                 className="p-0 border-2"
                             >
-                                <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">My Subject</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">
-                                    Another topic
-                                </NavDropdown.Item>
+                                
+                                    <Link to="/profile" data-rr-ui-dropdown-item class="dropdown-item" role="button">Profile</Link>
+                                
+                                
+                                    <Link to="/my-subject"  data-rr-ui-dropdown-item class="dropdown-item" role="button">My Subject</Link>
+                                
+                                    <Link to="/another-topic"  data-rr-ui-dropdown-item class="dropdown-item" role="button">Another topic</Link>
+                                
                                 <NavDropdown.Item href="#action/3.3">Log out</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
