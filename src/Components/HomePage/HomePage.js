@@ -6,6 +6,7 @@ import Achievement from "../Achievement/Achievement";
 import Testimonials from "../Testimonials/Testimonials";
 import ScrollToTop from "react-scroll-to-top";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+import './HomePage.css'
 
 const HomePage = () => {
     return (
