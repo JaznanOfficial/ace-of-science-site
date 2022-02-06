@@ -1,0 +1,13 @@
+section {
+  background-color: #efeff6;
+}
+.video_player {
+}
+.list-group-item {
+  background: none !important;
+  color: #5a2428 !important;
+  border-width: 0 0 1px 0 !important;
+}
+.list-group-item:hover {
+  background-color: #f56962 !important;
+}
