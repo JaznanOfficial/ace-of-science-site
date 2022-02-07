@@ -1,0 +1,19 @@
+.sb_card {
+  width: 18rem;
+  padding: 5px;
+  text-decoration: none;
+  color: whitesmoke;
+  background: linear-gradient(90deg, #373e4c, #4283ef);
+}
+.sb_card:hover {
+  color: whitesmoke;
+  box-shadow: 14px 16px 20px -18px #000000;
+}
+section {
+  min-height: 100vh;
+}
+@media screen and (max-width: 520px) {
+  .sb_card {
+    width: 100%;
+  }
+}

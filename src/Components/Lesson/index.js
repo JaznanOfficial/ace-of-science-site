@@ -1,4 +1,5 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import "./lesson.css";
 
@@ -28,8 +29,8 @@ export default function Lesson() {
     <section className="container-fluid mx-2">
       {/* {Qvalue.class + Qvalue.type + Qvalue.subject + Qvalue.v} */}
 
-      <div className="row">
-        <div className="col-md-8 col-12 ">
+      <Row>
+        <Col md={8}>
           <div>
             <video
               src={DefultVideo}
@@ -50,8 +51,8 @@ export default function Lesson() {
               sapiente!{" "}
             </p>
           </div>
-        </div>
-        <div className="col-md-4 col-12 ">
+        </Col>
+        <Col md={4}>
           <h6 className="py-1 my-2 border-bottom ">
             Class: {Qvalue.class} | Subject: {Qvalue.subject}
           </h6>
@@ -89,8 +90,14 @@ export default function Lesson() {
               Exam
             </Link>
           </div>
-        </div>
-      </div>
+          <Link
+            to={"/academicclass/" + Qvalue.class}
+            className="btn btn-success m-2"
+          >
+            Change Subject
+          </Link>
+        </Col>
+      </Row>
     </section>
   );
 }

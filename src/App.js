@@ -4,10 +4,10 @@ import Footer from "./Components/Footer";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import HomePage from "./View/HomePage/HomePage";
-import AcdmClass from "./View/AcademicClass/AcdmClass";
-import ClassSubject from "./View/ClassSubjects/ClassSubject";
-import Lesson from "./View/Lesson";
+import HomePage from "./Components/HomePage/HomePage";
+import AcdmClass from "./Components/AcademicClass/AcdmClass";
+import ClassSubject from "./Components/ClassSubjects/ClassSubject";
+import Lesson from "./Components/Lesson";
 
 function App() {
   return (
