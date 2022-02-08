@@ -1,0 +1,11 @@
+.contact_dec {
+  height: 300px;
+}
+.contact_img_col img {
+  width: 100%;
+}
+@media screen and (max-width: 786px) {
+  .contact_img_col {
+    display: none;
+  }
+}
