@@ -1,9 +1,9 @@
 import React from "react";
-import HeaderBanner from "../../Components/Header/HeaderBanner";
-import Category from "../../Components/Category/Category";
-import MagazineSlider from "../../Components/MagazineSlider/MagazineSlider";
-import Achievement from "../../Components/Achievement/Achievement";
-import Testimonials from "../../Components/Testimonials/Testimonials";
+import HeaderBanner from "../Header/HeaderBanner";
+import Category from "../Category/Category";
+import MagazineSlider from "../MagazineSlider/MagazineSlider";
+import Achievement from "../Achievement/Achievement";
+import Testimonials from "../Testimonials/Testimonials";
 import ScrollToTop from "react-scroll-to-top";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import './HomePage.css'

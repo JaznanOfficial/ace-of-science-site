@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 
 import ScrollToTop from "react-scroll-to-top";
-import HeaderBannerac from "../../Components/Header/HeaderBannerac";
+import HeaderBannerac from "../Header/HeaderBannerac";
 import { subjectOfClass } from "../../dummydata";
 import "./classsubject.css";
 
@@ -12,18 +12,16 @@ export default function ClassSubjects() {
 
   //rendering view variable
   const subjectCard = subjects?.map((subj, key) => (
-    <div className="card sb_card m-2" key={key}>
+    <Link
+      to={"/lesson?type=ac&class=" + classnumber + "&subject=" + subj.name}
+      className="card sb_card m-2"
+      key={key}
+    >
       <div className="card-body">
-        <h5 className="card-title">{subj.name}</h5>
-        <p className="card-text">{subj.description}</p>
-        <Link
-          to={"/lesson?type=ac&class=" + classnumber + "&subject=" + subj.name}
-          className="btn btn-primary"
-        >
-          Start lesson
-        </Link>
+        <h5 className="card-title text-start">{subj.name}</h5>
+        <p className="card-text text-start">23 videos</p>
       </div>
-    </div>
+    </Link>
   ));
 
   return (

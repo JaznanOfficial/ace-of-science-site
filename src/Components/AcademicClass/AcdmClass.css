@@ -1,0 +1,18 @@
+.class_button {
+  width: 15rem;
+  padding: 30px;
+  margin: 6px;
+  border-radius: 6px !important;
+  text-decoration: none;
+  color: whitesmoke;
+  background: linear-gradient(90deg, #aa6109, #feb854);
+}
+.class_button:hover {
+  color: whitesmoke;
+  box-shadow: 14px 16px 20px -18px #000000;
+}
+@media screen and (max-width: 520px) {
+  .class_button {
+    width: 100%;
+  }
+}

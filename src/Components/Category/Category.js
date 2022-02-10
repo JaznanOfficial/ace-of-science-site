@@ -30,7 +30,7 @@ const Category = () => {
           </Link>
         </Col>
         <Col>
-          <a href="">
+          <Link to={"/"}>
             <Card className="card-2 rounded-3 border border-light d-flex flex-row justify-content-center align-items-center px-2">
               <div className="image-div-2 d-flex justify-content-center align-items-center">
                 <img src={skill} alt="" width={48} />
@@ -42,10 +42,10 @@ const Category = () => {
                 </Card.Title>
               </Card.Body>
             </Card>
-          </a>
+          </Link>
         </Col>
         <Col>
-          <a href="">
+          <Link to={"/"}>
             <Card className="card-3 rounded-3 border border-light d-flex flex-row justify-content-center align-items-center px-2">
               <div className="image-div-3 d-flex justify-content-center align-items-center">
                 <img src={hat} alt="" width={48} />
@@ -57,7 +57,7 @@ const Category = () => {
                 </Card.Title>
               </Card.Body>
             </Card>
-          </a>
+          </Link>
         </Col>
       </Row>
     </div>
