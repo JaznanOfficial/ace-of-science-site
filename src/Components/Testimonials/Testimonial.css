@@ -3,15 +3,7 @@
     height: 380px
 }
 
-.home-testimonial-bottom {
-    background-color: #f8f8f8;
-    /* transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s; */
-    margin-top: 20px;
-    margin-bottom: 0px;
-    position: relative;
-    height: 130px;
-    top: 190px
-}
+
 
 .home-testimonial h3 {
     color: var(--orange);
@@ -28,7 +20,7 @@
 
 .testimonial-inner {
     position: relative;
-    top: -174px
+    top: 50px
 }
 
 .testimonial-pos {

@@ -15,7 +15,7 @@ const Testimonials = () => {
                             <h2>Explore the students experience</h2>
                         </div>
                     </div>
-                    <section class="home-testimonial-bottom">
+                    
                         <div class="container testimonial-inner">
                             <Row xs={1} md={3} className="g-4">
                                 <Col>
@@ -95,7 +95,7 @@ const Testimonials = () => {
                                 </Col>
                             </Row>
                         </div>
-                    </section>
+                  
                 </div>
             </section>
         </div>
