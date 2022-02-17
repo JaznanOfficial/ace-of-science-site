@@ -11,7 +11,7 @@
     color: #231834;
 }
 .footer-left{
-    width: 680px !important;
+    width: 320px !important;
 }
 
 .footer .footer-left strong{
@@ -22,7 +22,9 @@
 @media only screen and (max-width:900px) {
     .footer-left{
         width: 320px !important;
-        /* padding-right: 20px !important; */
+        padding-left: 10px !important;
+        border-left: 3px solid #FE1A00;
+        border-right: none !important;
     }
     .rights-div{
         margin-right: 0px !important;
