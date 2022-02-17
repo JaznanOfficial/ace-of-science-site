@@ -16,7 +16,7 @@ const Footer = () => {
                         </strong>
                     </div>
                 </div>
-                <div className="ms-3 ps-3 footer-right">
+                <div className="ms-3 footer-right">
                     <strong>
                         <h4 className="text-start">
                             AOS is a online guideline platform for secondary and higher secondary
