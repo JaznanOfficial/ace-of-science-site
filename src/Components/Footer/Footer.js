@@ -17,6 +17,7 @@ const Footer = () => {
                         </h4>
                     </strong>
                 </div>
+                <div className="d-sm-flex flex-row justify-content-center align-items-center">
                 <div className="footer-left text-start">
                     <img src={logo} alt="img not found" width={300} />
                     <div className="rights-div">
@@ -25,6 +26,7 @@ const Footer = () => {
                             <Typical className='d-inline' steps={["ACE OF SCIENCE", 1000, "", 500]} loop={Infinity} />
                         </strong>
                     </div>
+                </div>
                 </div>
             </div>
         </div>

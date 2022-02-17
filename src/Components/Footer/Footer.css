@@ -19,7 +19,7 @@
 }
 
 
-@media only screen and (max-width:720px) {
+@media only screen and (max-width:900px) {
     .footer-left{
         width: 320px !important;
         /* padding-right: 20px !important; */
