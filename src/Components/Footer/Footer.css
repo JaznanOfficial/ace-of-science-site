@@ -1,4 +1,21 @@
-footer{
-    height: 200px;
-    background-color: #FF6584;
+.footer{
+    /* height: 200px; */
+    background-color: #FEF0EF;
+}
+
+.footer-right{
+    border-left: 3px solid #FE1A00;
+}
+
+.footer h3{
+    color: #231834;
+}
+.footer-bottom{
+    background-color: #FEF0EF;
+    border-top: 3px solid #FE1A00;
+    width: 400px;
+}
+
+.footer-bottom strong{
+    color: #FE1A00;
 }
