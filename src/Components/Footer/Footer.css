@@ -1,5 +1,5 @@
 .footer{
-    /* height: 200px; */
+
     background-color: #FEF0EF;
 }
 
@@ -10,12 +10,10 @@
 .footer h3{
     color: #231834;
 }
-.footer-bottom{
-    background-color: #FEF0EF;
-    border-top: 3px solid #FE1A00;
-    width: 400px;
+.footer-left{
+    width: 680px !important;
 }
 
-.footer-bottom strong{
+.footer .footer-left strong{
     color: #FE1A00;
 }
