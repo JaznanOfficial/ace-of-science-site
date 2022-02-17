@@ -1,91 +1,75 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 import "./Testimonial.css";
 
 const Testimonials = () => {
     return (
         <div className="mt-5">
-            <section class="home-testimonial">
+            <section class="home-testimonial p-5">
                 <h2 className="pt-5">Explore the students experience</h2>
-                <div class="container-fluid">
 
-                    <div class="container testimonial-inner">
-                        <Row xs={1} md={3} className="g-4">
-                            <Col>
-                                <div class="tour-item">
-                                    <div class="tour-desc bg-white shadow-lg">
-                                        <div class="tour-text color-grey-3 text-center">
-                                            “At this School, our mission is to balance a rigorous
-                                            comprehensive college preparatory curriculum with
-                                            healthy social and emotional development.”
-                                        </div>
-                                        <div class="d-flex justify-content-center pt-2 pb-2">
-                                            <img
-                                                class="tm-people"
-                                                src="https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div class="link-name d-flex justify-content-center">
-                                            Balbir Kaur
-                                        </div>
-                                        <div class="link-position d-flex justify-content-center">
-                                            Student
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-                            <Col>
-                                <div class="tour-item ">
-                                    <div class="tour-desc bg-white shadow-lg">
-                                        <div class="tour-text color-grey-3 text-center">
-                                            “At this School, our mission is to balance a rigorous
-                                            comprehensive college preparatory curriculum with
-                                            healthy social and emotional development.”
-                                        </div>
-                                        <div class="d-flex justify-content-center pt-2 pb-2">
-                                            <img
-                                                class="tm-people"
-                                                src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div class="link-name d-flex justify-content-center">
-                                            Balbir Kaur
-                                        </div>
-                                        <div class="link-position d-flex justify-content-center">
-                                            Student
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-                            <Col>
-                                <div class="tour-item ">
-                                    <div class="tour-desc bg-white shadow-lg">
-                                        <div class="tour-text color-grey-3 text-center">
-                                            “At this School, our mission is to balance a rigorous
-                                            comprehensive college preparatory curriculum with
-                                            healthy social and emotional development.”
-                                        </div>
-                                        <div class="d-flex justify-content-center pt-2 pb-2">
-                                            <img
-                                                class="tm-people"
-                                                src="https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div class="link-name d-flex justify-content-center">
-                                            Balbir Kaur
-                                        </div>
-                                        <div class="link-position d-flex justify-content-center">
-                                            Student
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-                        </Row>
-                    </div>
-                </div>
+                <Row xs={1} md={3} className="g-4 mt-5">
+                    <Col>
+                        <Card>
+                            <Card.Body>
+                                <Card.Text>
+                                    "This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit
+                                    longer."
+                                </Card.Text>
+                            </Card.Body>
+                            <img
+                                variant="top"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4GcwgE8P_j_I5SQBXQNrtxp31bk0fkNdFEA&usqp=CAU"
+                               
+                                alt="img not found"
+                                className="mx-auto"
+                            />
+                            <Card.Title>Card title</Card.Title>
+                            <p>profession</p>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card>
+                            <Card.Body>
+                                <Card.Text>
+                                    "This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit
+                                    longer."
+                                </Card.Text>
+                            </Card.Body>
+                            <img
+                                variant="top"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4GcwgE8P_j_I5SQBXQNrtxp31bk0fkNdFEA&usqp=CAU"
+                               
+                                alt="img not found"
+                                className="mx-auto"
+                            />
+                            <Card.Title>Card title</Card.Title>
+                            <p>profession</p>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card>
+                            <Card.Body>
+                                <Card.Text>
+                                    "This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit
+                                    longer."
+                                </Card.Text>
+                            </Card.Body>
+                            <img
+                                variant="top"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4GcwgE8P_j_I5SQBXQNrtxp31bk0fkNdFEA&usqp=CAU"
+                               
+                                alt="img not found"
+                                className="mx-auto"
+                            />
+                            <Card.Title>Card title</Card.Title>
+                            <p>profession</p>
+                        </Card>
+                    </Col>
+                </Row>
             </section>
         </div>
     );
