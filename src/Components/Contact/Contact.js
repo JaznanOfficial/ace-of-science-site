@@ -35,12 +35,12 @@ const Contact = () => {
         <div>
         <section class="contact" id="contact">
         <div class="max-width">
-            <h2 class="title">Contact me</h2>
-            <div class="contact-content d-lg-flex flex-lg-row flex-sm-column justify-content-center align-items-center">
+            <h2 class="title">Contact us</h2>
+            <div class="contact-content d-lg-flex flex-lg-row flex-sm-column justify-content-center align-items-center mt-5">
                 <div class="column left w-100 mx-3">
                     <div class="text">Get in Touch</div>
                     <p className='text-center'>In any purpose you can contact with me</p>
-                    <div class="icons ms-3">
+                    <div class="icons ms-3 text-start">
                         <div class="row-icon">
                             <div><i class="fas fa-user"></i></div>
                             <div class="info">
@@ -65,7 +65,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <div class="column right w-100 mx-3">
-                    <div class="text">Message me</div>
+                    <div class="text">Message us</div>
                     <form action="#" onSubmit={sendMail} ref={form}>
                         <div class="fields">
                             <div class="field name">
