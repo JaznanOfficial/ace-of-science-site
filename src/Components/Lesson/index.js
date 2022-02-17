@@ -26,7 +26,7 @@ export default function Lesson() {
     "lesson 9",
   ];
   return (
-    <section className="container-fluid mx-2">
+    <section className="lesson-div container-fluid mx-2">
       {/* {Qvalue.class + Qvalue.type + Qvalue.subject + Qvalue.v} */}
 
       <Row>

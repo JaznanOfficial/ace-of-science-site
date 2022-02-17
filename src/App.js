@@ -7,8 +7,8 @@ import HomePage from "./Components/HomePage/HomePage";
 import AcdmClass from "./Components/AcademicClass/AcdmClass";
 import ClassSubject from "./Components/ClassSubjects/ClassSubject";
 import Lesson from "./Components/Lesson";
-import Contact from "./Components/Contact";
 import Footer from "./Components/Footer/Footer";
+import Contact from "./Components/Contact/Contact";
 
 function App() {
     return (
@@ -19,7 +19,6 @@ function App() {
                     <Route path="/" element={<HomePage></HomePage>}></Route>
                     <Route path="magazine" element={<HomePage></HomePage>}></Route>
                     <Route path="blog" element={<HomePage></HomePage>}></Route>
-                    <Route path="about" element={<HomePage></HomePage>}></Route>
                     <Route path="contact" element={<Contact></Contact>}></Route>
                     <Route path="/academicclass" element={<AcdmClass />} />
                     <Route path="/academicclass/:classnumber" element={<ClassSubject />} />

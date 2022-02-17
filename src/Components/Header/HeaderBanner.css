@@ -5,13 +5,18 @@
     font-weight: bolder;
 }
 .btn{
-    background-color: #F56962!important;
-    border: none !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    background-color: #fe1a00 !important;
+    border: 2px solid #fe1a00 !important;
+
 }
 
 
 .btn:hover {
-	background-color:#fe1a00 !important;
+	/* background-color:#fe1a00 !important; */
 	/* background-color:#FF6584 !important; */
-    box-shadow: 2px 3px 15px #F56962;
+    /* box-shadow: 2px 3px 15px #F56962; */
+    color: crimson !important;
+  background: none !important;
 }
