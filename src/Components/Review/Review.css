@@ -1,0 +1,69 @@
+.review-img{
+    /* background-color: #FD9697; */
+}
+
+.rating span{
+    color: #fe1a00;
+}
+
+
+
+.review .right form .fields{
+    display: flex;
+}
+.review .right form .field,
+.review .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.review .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.review .right form .name{
+    margin-right: 10px;
+}
+.review .right form .field input,
+.review .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.review .right form .field input:focus,
+.review .right form .textarea textarea:focus{
+    border-color: #b3b3b3;
+}
+.review .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.review .right form .button-area{
+  display: flex;
+  align-items: center;
+}
+.right form .button-area button{
+  color: #fff;
+  display: block;
+  width: 160px!important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: #fe1a00;
+  border: 2px solid #fe1a00;
+  transition: all 0.3s ease;
+}
+.right form .button-area button:hover{
+  color: crimson;
+  background: none;
+}

@@ -16,7 +16,7 @@ const Contact = () => {
             console.log(result.text);
             swal({
                 title: "Good job!",
-                text: "Your message successfully sent!",
+                text: "Your message successfully sent! Please check your email",
                 icon: "success",
             });
             e.target.reset()

@@ -23,7 +23,6 @@ const Navigation = () => {
                             <Link to="/">Home</Link>
                             <Link to="/magazine">Magazine</Link>
                             <Link to="/blog">Blog</Link>
-                            <Link to="/about">About</Link>
                             <Link to="contact">Contact</Link>
                             <Link to="login">
                                 <Button className="login">Log in</Button>
@@ -37,9 +36,9 @@ const Navigation = () => {
                                     <Link to="/profile" data-rr-ui-dropdown-item class="dropdown-item" role="button">Profile</Link>
                                 
                                 
-                                    <Link to="/my-subject"  data-rr-ui-dropdown-item class="dropdown-item" role="button">My Subject</Link>
+                                    <Link to="/review"  data-rr-ui-dropdown-item class="dropdown-item" role="button">Review us</Link>
                                 
-                                    <Link to="/another-topic"  data-rr-ui-dropdown-item class="dropdown-item" role="button">Another topic</Link>
+                                    
                                 
                                 <NavDropdown.Item href="#action/3.3">Log out</NavDropdown.Item>
                             </NavDropdown>

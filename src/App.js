@@ -9,6 +9,7 @@ import ClassSubject from "./Components/ClassSubjects/ClassSubject";
 import Lesson from "./Components/Lesson";
 import Footer from "./Components/Footer/Footer";
 import Contact from "./Components/Contact/Contact";
+import Review from "./Components/Review/Review";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/academicclass" element={<AcdmClass />} />
                     <Route path="/academicclass/:classnumber" element={<ClassSubject />} />
                     <Route path="/lesson" element={<Lesson />} />
+                    <Route path="/review" element={<Review/>}/>
                 </Routes>
                 <Footer></Footer>
             </BrowserRouter>
