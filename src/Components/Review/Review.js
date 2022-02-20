@@ -7,13 +7,13 @@ const Review = () => {
     const form = useRef();
     return (
         <div className="review">
-            <div className="d-lg-flex flex-row justify-content-around align-items-center my-5">
+            <div className="container d-lg-flex flex-row justify-content-between align-items-center my-5">
                 <div className="review-img">
-                    <img src={review} alt="img not found" width="400px" />
+                    <img src={review} alt="img not found" width="380px"  />
                 </div>
                 <div>
-                    <div class="column right w-100 mx-3">
-                        <h1 class="text">Message us</h1>
+                    <div class="column right w-100 my-5">
+                        <h1 class="text">Review us</h1>
                         <form action="#" ref={form}>
                             <div class="fields">
                                 <div class="field name">
