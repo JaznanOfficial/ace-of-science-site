@@ -10,6 +10,7 @@ import Lesson from "./Components/Lesson";
 import Footer from "./Components/Footer/Footer";
 import Contact from "./Components/Contact/Contact";
 import Review from "./Components/Review/Review";
+import Blogs from "./Components/Blog/Blogs";
 
 function App() {
     return (
@@ -18,8 +19,7 @@ function App() {
                 <Navigation></Navigation>
                 <Routes>
                     <Route path="/" element={<HomePage></HomePage>}></Route>
-                    <Route path="magazine" element={<HomePage></HomePage>}></Route>
-                    <Route path="blog" element={<HomePage></HomePage>}></Route>
+                    <Route path="blog" element={<Blogs></Blogs>}></Route>
                     <Route path="contact" element={<Contact></Contact>}></Route>
                     <Route path="/academicclass" element={<AcdmClass />} />
                     <Route path="/academicclass/:classnumber" element={<ClassSubject />} />
