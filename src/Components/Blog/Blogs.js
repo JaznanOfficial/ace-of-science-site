@@ -16,7 +16,7 @@ const Blogs = () => {
                     <Row xs={1} md={2} className="g-4">
                         {Array.from({ length: 4 }).map((_, idx) => (
                             <SwiperSlide>
-                                <Card className="d-lg-flex flex-lg-row justify-content-center align-items-center p-3 text-start">
+                                <Card className="d-lg-flex flex-lg-row justify-content-center align-items-center p-3 text-start ">
                                     <div>
                                         <img
                                             src="https://thumbs.dreamstime.com/b/freedom-concept-silhouettes-broken-chain-birds-flying-sky-180470108.jpg"
@@ -52,7 +52,7 @@ const Blogs = () => {
             <Row xs={1} md={3} className="g-4">
                 {Array.from({ length: 6 }).map((_, idx) => (
                     <Col>
-                        <Card>
+                        <Card className="shadow">
                             <Card.Img
                                 variant="top"
                                 src="https://thumbs.dreamstime.com/b/freedom-concept-silhouettes-broken-chain-birds-flying-sky-180470108.jpg"
