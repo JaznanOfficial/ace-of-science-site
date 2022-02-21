@@ -44,3 +44,10 @@
   .swiper-image{
       width: 200px !important;
   }
+
+  @media only screen and (max-width:480px){
+    .swiper-image{
+        width: 320px !important;
+    }
+  }
+  
