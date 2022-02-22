@@ -8,7 +8,7 @@
 }
 .signin-card{
     width: 400px;
-    height: 400px;
+    height: 410px;
     /* margin-left: 100px; */
     background: rgba( 255, 255, 255, 0.6 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -48,12 +48,18 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 @media only screen and (max-width:480px) {
     .signin{
-        background-size: auto;
+        
+        background-image: none;
+        
         height: 420px;
-        background-size: cover;
 
     }
     .signin-card{
+        width: 350px;
+        height: 390px;
         margin: 20px;
+    }
+    .signin-card img{
+        width: 315px !important;
     }
 }

@@ -4,7 +4,7 @@ import "./Signin.css";
 
 const Signin = () => {
     return (
-        <div className="signin d-flex justify-content-center align-items-center">
+        <div className="signin d-flex justify-content-center align-items-center mx-auto">
             <div className="signin-card p-3 m-3">
                 <img src="https://c.tenor.com/9Xf0d7BGQ5oAAAAC/computer-log-in.gif" alt="img not found" width='360px' />
                 <div className="d-grid gap-2 mt-3 text-center">
