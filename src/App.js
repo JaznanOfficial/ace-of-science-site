@@ -12,6 +12,7 @@ import Contact from "./Components/Contact/Contact";
 import Review from "./Components/Review/Review";
 import Blogs from "./Components/Blog/Blogs";
 import Signin from "./Components/Signin/Signin";
+import Profile from "./Components/Profile/Profile";
 
 function App() {
     return (
@@ -25,6 +26,8 @@ function App() {
                     <Route path="/academicclass" element={<AcdmClass />} />
                     <Route path="/academicclass/:classnumber" element={<ClassSubject />} />
                     <Route path="/lesson" element={<Lesson />} />
+                    <Route path="/profile" element={<Profile />} />
+
                     <Route path="/signin" element={<Signin/>}/>
                     <Route path="/review" element={<Review/>}/>
                 </Routes>
