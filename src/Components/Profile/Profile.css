@@ -18,6 +18,12 @@ body {
     margin-bottom: 30px
 }
 
+.profile{
+    background-image: url('profile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .m-r-0 {
     margin-right: 0px
 }
