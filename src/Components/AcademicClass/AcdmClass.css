@@ -1,11 +1,28 @@
-.class_button {
-  width: 15rem;
-  padding: 30px;
-  margin: 6px;
-  border-radius: 6px !important;
-  text-decoration: none;
-  color: whitesmoke;
-  background: linear-gradient(90deg, #aa6109, #feb854);
+.academic-class h1{
+  color: #fe1a00;
+}
+
+.card-1 {
+  background-color: #fef3e8 !important;
+}
+.card-1:hover {
+  background-color: #fea04d !important;
+}
+.card-1:hover .image-div-1 {
+  background-color: white !important;
+}
+
+.card:hover .image-div-1,
+.image-div-2,
+.image-div-3 {
+    background-color: white;
+}
+.image-div-1 {
+  margin: 5px;
+  width: 90px !important;
+  height: 90px !important;
+  border-radius: 50%;
+  background-color: #fae0d0 !important;
 }
 .class_button:hover {
   color: whitesmoke;

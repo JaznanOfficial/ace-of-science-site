@@ -13,6 +13,9 @@ import Review from "./Components/Review/Review";
 import Blogs from "./Components/Blog/Blogs";
 import Signin from "./Components/Signin/Signin";
 import Profile from "./Components/Profile/Profile";
+import Skills from "./Components/Skills/Skills";
+
+
 
 function App() {
     return (
@@ -23,7 +26,10 @@ function App() {
                     <Route path="/" element={<HomePage></HomePage>}></Route>
                     <Route path="blog" element={<Blogs></Blogs>}></Route>
                     <Route path="contact" element={<Contact></Contact>}></Route>
-                    <Route path="/academicclass" element={<AcdmClass />} />
+                    <Route path="skills" element={<Skills/>}></Route>
+                    <Route path="others" element={<Skills/>}></Route>
+
+                    <Route path="/academic-class" element={<AcdmClass />} />
                     <Route path="/academicclass/:classnumber" element={<ClassSubject />} />
                     <Route path="/lesson" element={<Lesson />} />
                     <Route path="/profile" element={<Profile />} />

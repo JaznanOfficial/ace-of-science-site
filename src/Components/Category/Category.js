@@ -15,7 +15,7 @@ const Category = () => {
       </div>
       <Row xs={1} md={3} className="g-4">
         <Col>
-          <Link to="/academicclass">
+          <Link to="/academic-class">
             <Card className="card-1 rounded-3 border border-light d-flex flex-row justify-content-center align-items-center px-2">
               <div className="image-div-1 d-flex justify-content-center align-items-center">
                 <img src={book} alt="" width={48} />
@@ -30,7 +30,7 @@ const Category = () => {
           </Link>
         </Col>
         <Col>
-          <Link to={"/"}>
+          <Link to="/skills">
             <Card className="card-2 rounded-3 border border-light d-flex flex-row justify-content-center align-items-center px-2">
               <div className="image-div-2 d-flex justify-content-center align-items-center">
                 <img src={skill} alt="" width={48} />
@@ -45,7 +45,7 @@ const Category = () => {
           </Link>
         </Col>
         <Col>
-          <Link to={"/"}>
+          <Link to="others">
             <Card className="card-3 rounded-3 border border-light d-flex flex-row justify-content-center align-items-center px-2">
               <div className="image-div-3 d-flex justify-content-center align-items-center">
                 <img src={hat} alt="" width={48} />

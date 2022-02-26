@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 
 import ScrollToTop from "react-scroll-to-top";
-import HeaderBannerac from "../Header/HeaderBannerac";
+
 import { subjectOfClass } from "../../dummydata";
 import "./classsubject.css";
 
@@ -27,7 +27,7 @@ export default function ClassSubjects() {
   return (
     <section>
       <ScrollToTop smooth color="#FE1A00" viewBox="0 0 250 250" />
-      <HeaderBannerac title="Select Subject" />
+
       <div className="container d-flex flex-wrap justify-content-center">
         {subjectCard || (
           <div class="alert alert-warning my-2" role="alert">
