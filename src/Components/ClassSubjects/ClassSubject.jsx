@@ -1,5 +1,7 @@
 import React from "react";
+import { Card, Col } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
+import book from '../AcademicClass/book-icon.png'
 
 import ScrollToTop from "react-scroll-to-top";
 
@@ -11,18 +13,38 @@ export default function ClassSubjects() {
   const subjects = subjectOfClass[classnumber];
 
   //rendering view variable
+  // <Row xs={1} md={3} className="g-4 my-3"></Row>
   const subjectCard = subjects?.map((subj, key) => (
+    <Col>
     <Link
       to={"/lesson?type=ac&class=" + classnumber + "&subject=" + subj.name}
-      className="card sb_card m-2"
+
       key={key}
     >
-      <div className="card-body">
-        <h5 className="card-title text-start">{subj.name}</h5>
-        <p className="card-text text-start">23 videos</p>
-      </div>
-    </Link>
+    <Card className="card-1 rounded-3 border border-light d-flex flex-row justify-content-center align-items-center px-2 shadow">
+    <div className="image-div-1 d-flex justify-content-center align-items-center">
+        <img src={book} alt="" width={48} />
+    </div>
+    <Card.Body>
+        <Card.Title>
+            <h2>{subj.name}</h2>
+        </Card.Title>
+    </Card.Body>
+</Card>
+      </Link>
+      </Col>
   ));
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <section>
