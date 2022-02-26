@@ -20,7 +20,7 @@ export default function AcdmClass() {
                     {classes.map((classvalue, key) => (
                         <Col className="my-0">
                             <Link to={"/academicclass/" + classvalue} key={key}>
-                                <Card className="card-1 rounded-3 border border-light d-flex flex-row justify-content-center align-items-center px-2">
+                                <Card className="card-1 rounded-3 border border-light d-flex flex-row justify-content-center align-items-center px-2 shadow">
                                     <div className="image-div-1 d-flex justify-content-center align-items-center">
                                         <img src={book} alt="" width={48} />
                                     </div>
