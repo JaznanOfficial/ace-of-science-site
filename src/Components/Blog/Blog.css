@@ -1,5 +1,5 @@
 .card-img-top{
-    width: 320px !important;
+    width: 90% !important;
     border-radius: 10px !important;
 }
 .see-more{
@@ -36,7 +36,7 @@
   
   .swiper-slide img {
     display: block;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     object-fit: cover;
   }
@@ -44,10 +44,10 @@
   .swiper-image{
       width: 200px !important;
   }
-
+/* 
   @media only screen and (max-width:480px){
     .swiper-image{
         width: 320px !important;
     }
-  }
+  } */
   
