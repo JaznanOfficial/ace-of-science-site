@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
+import { Button } from "react-bootstrap";
 
 const MagazineSlider = () => {
     return (
@@ -39,7 +40,9 @@ const MagazineSlider = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                <a href="logo512.png" download><img src="https://swiperjs.com/demos/images/nature-1.jpg"/></a>
+                
+                        
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
