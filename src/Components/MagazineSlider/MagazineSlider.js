@@ -40,7 +40,7 @@ const MagazineSlider = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                <a href="logo512.png" download><img src="https://swiperjs.com/demos/images/nature-1.jpg"/></a>
+                <a href="logo512.png" download><img src="https://i.ibb.co/b75jrgN/screencapture-jaznanofficial-github-io-mouse-food-house-2022-01-17-09-21-51.png"/></a>
                 
                         
                 </SwiperSlide>
