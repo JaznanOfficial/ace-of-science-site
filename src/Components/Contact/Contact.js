@@ -2,7 +2,7 @@ import emailjs from '@emailjs/browser';
 import React, { useRef } from 'react';
 import swal from 'sweetalert';
 import Swal from 'sweetalert2';
-import './Contact.css'
+import './contact.css'
 
 const Contact = () => {
     const form = useRef();
