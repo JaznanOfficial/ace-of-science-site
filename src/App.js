@@ -14,31 +14,32 @@ import Blogs from "./Components/Blog/Blogs";
 import Signin from "./Components/Signin/Signin";
 import Profile from "./Components/Profile/Profile";
 import Skills from "./Components/Skills/Skills";
-
-
+import AuthProvider from "./Contexts/AuthProvider";
 
 function App() {
     return (
         <div className="App">
-            <BrowserRouter>
-                <Navigation></Navigation>
-                <Routes>
-                    <Route path="/" element={<HomePage></HomePage>}></Route>
-                    <Route path="blog" element={<Blogs></Blogs>}></Route>
-                    <Route path="contact" element={<Contact></Contact>}></Route>
-                    <Route path="skills" element={<Skills/>}></Route>
-                    <Route path="others" element={<Skills/>}></Route>
+            <AuthProvider>
+                <BrowserRouter>
+                    <Navigation></Navigation>
+                    <Routes>
+                        <Route path="/" element={<HomePage></HomePage>}></Route>
+                        <Route path="blog" element={<Blogs></Blogs>}></Route>
+                        <Route path="contact" element={<Contact></Contact>}></Route>
+                        <Route path="skills" element={<Skills />}></Route>
+                        <Route path="others" element={<Skills />}></Route>
 
-                    <Route path="/academic-class" element={<AcdmClass />} />
-                    <Route path="/academicclass/:classnumber" element={<ClassSubject />} />
-                    <Route path="/lesson" element={<Lesson />} />
-                    <Route path="/profile" element={<Profile />} />
+                        <Route path="/academic-class" element={<AcdmClass />} />
+                        <Route path="/academicclass/:classnumber" element={<ClassSubject />} />
+                        <Route path="/lesson" element={<Lesson />} />
+                        <Route path="/profile" element={<Profile />} />
 
-                    <Route path="/signin" element={<Signin/>}/>
-                    <Route path="/review" element={<Review/>}/>
-                </Routes>
-                <Footer></Footer>
-            </BrowserRouter>
+                        <Route path="/signin" element={<Signin />} />
+                        <Route path="/review" element={<Review />} />
+                    </Routes>
+                    <Footer></Footer>
+                </BrowserRouter>
+            </AuthProvider>
         </div>
     );
 }
