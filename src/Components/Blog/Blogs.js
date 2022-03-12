@@ -33,13 +33,12 @@ const Blogs = () => {
                                                 content is a little bit longer.
                                             </Card.Text>
                                         </Card.Body>
-                                        
                                     </div>
                                     <strong className="mb-3 text-center">
-                                            <a href="#" className="see-more">
-                                                See More <i class="fas fa-arrow-circle-right"></i>{" "}
-                                            </a>
-                                        </strong>
+                                        <a href="#" className="see-more">
+                                            See More <i className="fas fa-arrow-circle-right"></i>{" "}
+                                        </a>
+                                    </strong>
                                 </Card>
                             </SwiperSlide>
                         ))}
@@ -68,7 +67,7 @@ const Blogs = () => {
                             </Card.Body>
                             <strong className="mb-3">
                                 <a href="#" className="see-more">
-                                    See More <i class="fas fa-arrow-circle-right"></i>{" "}
+                                    See More <i className="fas fa-arrow-circle-right"></i>{" "}
                                 </a>
                             </strong>
                         </Card>

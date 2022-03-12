@@ -27,18 +27,28 @@ const Navigation = () => {
                                 <Button className="login">Log in</Button>
                             </Link>
                             <NavDropdown
-                                title={<i class="far fa-user-circle fs-5"></i>}
+                                title={<i className="far fa-user-circle fs-5"></i>}
                                 id="collasible-nav-dropdown"
                                 className="p-0 border-2"
                             >
-                                
-                                    <Link to="/profile" data-rr-ui-dropdown-item class="dropdown-item" role="button">Profile</Link>
-                                
-                                
-                                    <Link to="/review"  data-rr-ui-dropdown-item class="dropdown-item" role="button">Review us</Link>
-                                
-                                    
-                                
+                                <Link
+                                    to="/profile"
+                                    data-rr-ui-dropdown-item
+                                    className="dropdown-item"
+                                    role="button"
+                                >
+                                    Profile
+                                </Link>
+
+                                <Link
+                                    to="/review"
+                                    data-rr-ui-dropdown-item
+                                    className="dropdown-item"
+                                    role="button"
+                                >
+                                    Review us
+                                </Link>
+
                                 <NavDropdown.Item href="#action/3.3">Log out</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>

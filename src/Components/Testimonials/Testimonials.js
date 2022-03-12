@@ -5,7 +5,7 @@ import "./Testimonial.css";
 const Testimonials = () => {
     return (
         <div className="mt-5">
-            <section class="home-testimonial p-5">
+            <section className="home-testimonial p-5">
                 <h2 className="pt-5">Explore the students experience</h2>
 
                 <Row xs={1} md={3} className="g-4 mt-5">
@@ -21,7 +21,6 @@ const Testimonials = () => {
                             <img
                                 variant="top"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4GcwgE8P_j_I5SQBXQNrtxp31bk0fkNdFEA&usqp=CAU"
-                               
                                 alt="img not found"
                                 className="mx-auto"
                             />
@@ -41,7 +40,6 @@ const Testimonials = () => {
                             <img
                                 variant="top"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4GcwgE8P_j_I5SQBXQNrtxp31bk0fkNdFEA&usqp=CAU"
-                               
                                 alt="img not found"
                                 className="mx-auto"
                             />
@@ -61,7 +59,6 @@ const Testimonials = () => {
                             <img
                                 variant="top"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4GcwgE8P_j_I5SQBXQNrtxp31bk0fkNdFEA&usqp=CAU"
-                               
                                 alt="img not found"
                                 className="mx-auto"
                             />
