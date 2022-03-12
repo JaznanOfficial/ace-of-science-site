@@ -3,8 +3,10 @@ import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./Navigation.css";
 import siteLogo from "./ace-of-science.png";
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const Navigation = () => {
+    const { user } = useAuth();
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" variant="light">
@@ -23,10 +25,10 @@ const Navigation = () => {
                             <Link to="/">Home</Link>
                             <Link to="blog">Blog</Link>
                             <Link to="contact">Contact</Link>
-                            <Link to="signin">
-                                <Button className="login">Log in</Button>
-                            </Link>
-                            <NavDropdown
+                            
+                            {
+                                user?.email?
+                                <NavDropdown
                                 title={<i className="far fa-user-circle fs-5"></i>}
                                 id="collasible-nav-dropdown"
                                 className="p-0 border-2"
@@ -50,7 +52,11 @@ const Navigation = () => {
                                 </Link>
 
                                 <NavDropdown.Item href="#action/3.3">Log out</NavDropdown.Item>
-                            </NavDropdown>
+                                    </NavDropdown> :
+                                    <Link to="signin">
+                                <Button className="login">Log in</Button>
+                            </Link>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

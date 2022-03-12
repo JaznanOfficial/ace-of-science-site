@@ -15,6 +15,7 @@ import Signin from "./Components/Signin/Signin";
 import Profile from "./Components/Profile/Profile";
 import Skills from "./Components/Skills/Skills";
 import AuthProvider from "./Contexts/AuthProvider";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 function App() {
     return (
@@ -32,10 +33,17 @@ function App() {
                         <Route path="/academic-class" element={<AcdmClass />} />
                         <Route path="/academicclass/:classnumber" element={<ClassSubject />} />
                         <Route path="/lesson" element={<Lesson />} />
-                        <Route path="/profile" element={<Profile />} />
+                        <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
 
                         <Route path="/signin" element={<Signin />} />
-                        <Route path="/review" element={<Review />} />
+                        <Route
+                            path="/review"
+                            element={
+                                <PrivateRoute>
+                                    <Review />
+                                </PrivateRoute>
+                            }
+                        />
                     </Routes>
                     <Footer></Footer>
                 </BrowserRouter>
