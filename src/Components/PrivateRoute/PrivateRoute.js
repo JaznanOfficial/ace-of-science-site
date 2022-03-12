@@ -10,10 +10,10 @@ const PrivateRoute = ({ children, ...rest }) => {
     // {
     //     user.email?children:<Navigate to='/login' state={{from:location}}></Navigate>
     // }
-    if (user.email) {
+    if (user) {
         return children;
     }
-    return <Navigate to='/login' state={{from: location}}></Navigate>
+    return <Navigate to='/sign-in' state={{from: location}}></Navigate>
 };
 
 export default PrivateRoute;

@@ -53,7 +53,7 @@ const Navigation = () => {
 
                                 <NavDropdown.Item href="#action/3.3">Log out</NavDropdown.Item>
                                     </NavDropdown> :
-                                    <Link to="signin">
+                                    <Link to="sign-in">
                                 <Button className="login">Log in</Button>
                             </Link>
                             }
