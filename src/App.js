@@ -31,8 +31,8 @@ function App() {
                         <Route path="others" element={<Skills />}></Route>
 
                         <Route path="/academic-class" element={<AcdmClass />} />
-                        <Route path="/academicclass/:classnumber" element={<ClassSubject />} />
-                        <Route path="/lesson" element={<Lesson />} />
+                        <Route path="/academicclass/:classnumber" element={<PrivateRoute><ClassSubject /></PrivateRoute>} />
+                        <Route path="/lesson" element={<PrivateRoute><Lesson /></PrivateRoute>} />
                         <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
 
                         <Route path="/signin" element={<Signin />} />
