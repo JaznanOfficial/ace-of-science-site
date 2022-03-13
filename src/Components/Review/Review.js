@@ -35,7 +35,7 @@ const Review = () => {
                             </div>
                             <div className="field rating text-start">
                                 <Rating
-                                    stop={6}
+                                    stop={5}
                                     emptySymbol={[
                                         "fa fa-star-o fa-2x low",
                                         "fa fa-star-o fa-2x low",
