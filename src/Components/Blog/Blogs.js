@@ -5,10 +5,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import "./Blog.css";
+import ScrollToTop from "react-scroll-to-top";
 
 const Blogs = () => {
     return (
         <div className="container my-5">
+        <ScrollToTop smooth color="#FE1A00" viewBox="0 0 250 250" />
             <div className="my-5 h-100">
                 <h1 className="text-danger">Featured Blog</h1>
 

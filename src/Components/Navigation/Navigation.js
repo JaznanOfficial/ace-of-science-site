@@ -25,36 +25,41 @@ const Navigation = () => {
                             <Link to="/">Home</Link>
                             <Link to="blog">Blog</Link>
                             <Link to="contact">Contact</Link>
-                            
-                            {
-                                user?.email?
+
+                            {user?.email ? (
                                 <NavDropdown
-                                title={<i className="far fa-user-circle fs-5"></i>}
-                                id="collasible-nav-dropdown"
-                                className="p-0 border-2"
-                            >
-                                <Link
-                                    to="/profile"
-                                    data-rr-ui-dropdown-item
-                                    className="dropdown-item"
-                                    role="button"
+                                    title={<i className="far fa-user-circle fs-5"></i>}
+                                    id="collasible-nav-dropdown"
+                                    className="p-0 border-2"
                                 >
-                                    Profile
-                                </Link>
+                                    <Link
+                                        to="/profile"
+                                        data-rr-ui-dropdown-item
+                                        className="dropdown-item"
+                                        role="button"
+                                    >
+                                        Profile
+                                    </Link>
 
-                                <Link
-                                    to="/review"
-                                    data-rr-ui-dropdown-item
-                                    className="dropdown-item"
-                                    role="button"
-                                >
-                                    Review us
-                                </Link>
+                                    <Link
+                                        to="/review"
+                                        data-rr-ui-dropdown-item
+                                        className="dropdown-item"
+                                        role="button"
+                                    >
+                                        Review us
+                                    </Link>
 
-                                <NavDropdown.Item href="#action/3.3">Log out</NavDropdown.Item>
-                                    </NavDropdown> :
-                                    <Link to="sign-in">
-                                <Button className="login">Log in</Button>
+                                    <NavDropdown.Item href="#action/3.3">Log out</NavDropdown.Item>
+                                </NavDropdown>
+                            ) : (
+                                <Link to="sign-in">
+                                    <Button className="login">Log in</Button>
+                                </Link>
+                            )}
+                            {
+                                user?.email && <Link to="sign-out">
+                                <Button className="login">Log Out</Button>
                             </Link>
                             }
                         </Nav>
