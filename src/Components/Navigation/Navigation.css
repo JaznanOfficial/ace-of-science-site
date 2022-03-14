@@ -1,3 +1,9 @@
+.user-img{
+    width: 40px !important;
+    border-radius: 50%;
+}
+
+
 .dropdown-menu, .navbar{
     /* background: rgb(66,61,164) !important;
 background: radial-gradient(circle, rgb(38, 35, 107) 0%, rgba(10,10,96,1) 100%) !important; */

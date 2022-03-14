@@ -3,9 +3,12 @@ import { Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 import Swal from "sweetalert2";
+import useAuth from "../../Hooks/useAuth";
 import "./Profile.css";
 
 const Profile = () => {
+
+    const {user} = useAuth()
     const [show, setShow] = useState(false);
 
     const form = useRef();
@@ -34,12 +37,12 @@ const Profile = () => {
                                             <div className="m-b-25">
                                                 {" "}
                                                 <img
-                                                    src="https://img.icons8.com/bubbles/100/000000/user.png"
+                                                    src={user.photoURL}
                                                     className="img-radius"
                                                     alt="User-Profile-Image"
                                                 />{" "}
                                             </div>
-                                            <h6 className="f-w-600">Hembo Tingor</h6>
+                                            <h6 className="f-w-600">{user.displayName}</h6>
                                             <p>Web Designer</p>{" "}
                                             <i
                                                 variant="primary"
@@ -117,7 +120,7 @@ const Profile = () => {
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Email</p>
                                                     <h6 className="text-muted f-w-400">
-                                                        rntng@gmail.com
+                                                        {user.email}
                                                     </h6>
                                                 </div>
                                                 <div className="col-sm-6">

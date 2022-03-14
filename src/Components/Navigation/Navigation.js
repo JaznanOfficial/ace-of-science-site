@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const Navigation = () => {
-    const { user } = useAuth();
+    const { user, logOut } = useAuth();
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" variant="light">
@@ -26,42 +26,22 @@ const Navigation = () => {
                             <Link to="blog">Blog</Link>
                             <Link to="contact">Contact</Link>
 
+                            {user?.email && <Link to="/review">Review us</Link>}
+
                             {user?.email ? (
-                                <NavDropdown
-                                    title={<i className="far fa-user-circle fs-5"></i>}
-                                    id="collasible-nav-dropdown"
-                                    className="p-0 border-2"
-                                >
-                                    <Link
-                                        to="/profile"
-                                        data-rr-ui-dropdown-item
-                                        className="dropdown-item"
-                                        role="button"
-                                    >
-                                        Profile
-                                    </Link>
-
-                                    <Link
-                                        to="/review"
-                                        data-rr-ui-dropdown-item
-                                        className="dropdown-item"
-                                        role="button"
-                                    >
-                                        Review us
-                                    </Link>
-
-                                    <NavDropdown.Item href="#action/3.3">Log out</NavDropdown.Item>
-                                </NavDropdown>
+                                <Link to="/profile" className="m-2 border-2">
+                                    <img src={user.photoURL} className="user-img"></img>
+                                </Link>
                             ) : (
                                 <Link to="sign-in">
                                     <Button className="login">Log in</Button>
                                 </Link>
                             )}
-                            {
-                                user?.email && <Link to="sign-out">
-                                <Button className="login">Log Out</Button>
-                            </Link>
-                            }
+                            {user?.email && (
+                                <Button onClick={logOut} className="login">
+                                    Log Out
+                                </Button>
+                            )}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
