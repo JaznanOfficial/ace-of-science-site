@@ -5,7 +5,7 @@ import useAuth from "../../Hooks/useAuth";
 import "./Signin.css";
 
 const Signin = () => {
-    const { signinUsingGoogle } = useAuth();
+    const { signinUsingGoogle,setIsLoading } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
     const navigateUrl = location?.state?.from || "/home";
@@ -15,7 +15,9 @@ const Signin = () => {
             .then((result) => {
                 navigate(navigateUrl);
             })
-            .finally(() => {});
+            .finally(() => {
+                setIsLoading(false);
+            });
     };
 
     return (

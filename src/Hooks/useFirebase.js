@@ -8,6 +8,7 @@ const useFirebase = () => {
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
     const [user, setUser] = useState({});
+    const [isLoading,setIsLoading] = useState(true)
 
     const signinUsingGoogle = () => {
         // console.log("signing in...");
@@ -22,6 +23,7 @@ const useFirebase = () => {
             } else {
                 setUser({});
             }
+            setIsLoading(false)
         });
         return () => unsubscribed;
     }, []);
@@ -36,6 +38,8 @@ const useFirebase = () => {
         user,
         signinUsingGoogle,
         logOut,
+        isLoading,
+        setIsLoading,
     };
 };
 
