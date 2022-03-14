@@ -10,7 +10,7 @@ const Signin = () => {
     const location = useLocation();
     const navigateUrl = location?.state?.from || "/home";
     const GoogleSignin = () => {
-        console.log("hello");
+        
         signinUsingGoogle()
             .then((result) => {
                 navigate(navigateUrl);
