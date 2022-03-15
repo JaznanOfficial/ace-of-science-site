@@ -5,14 +5,26 @@ import useAuth from "../../Hooks/useAuth";
 import "./Signin.css";
 
 const Signin = () => {
-    const { signinUsingGoogle,setIsLoading } = useAuth();
+    const { signinUsingGoogle, setIsLoading, signinUsingGithub, user,setUser } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
     const navigateUrl = location?.state?.from || "/home";
+
     const GoogleSignin = () => {
-        
         signinUsingGoogle()
             .then((result) => {
+                console.log(result)
+                navigate(navigateUrl);
+            })
+            .finally(() => {
+                setIsLoading(false);
+            });
+    };
+
+    const githubSignin = () => {
+        signinUsingGithub()
+            .then((result) => {
+               console.log(result)
                 navigate(navigateUrl);
             })
             .finally(() => {
@@ -34,7 +46,7 @@ const Signin = () => {
                             <i className="fab fa-google-plus"></i> Google
                         </h5>
                     </Button>
-                    <Button variant="secondary" size="lg" className="github">
+                    <Button variant="secondary" size="lg" className="github" onClick={githubSignin}>
                         <h5>
                             <i className="fab fa-github"></i> Github
                         </h5>

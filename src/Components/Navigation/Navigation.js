@@ -26,9 +26,9 @@ const Navigation = () => {
                             <Link to="blog">Blog</Link>
                             <Link to="contact">Contact</Link>
 
-                            {user?.email && <Link to="/review">Review us</Link>}
+                            {user?.auth && <Link to="/review">Review us</Link>}
 
-                            {user?.email ? (
+                            {user?.auth ? (
                                 <Link to="/profile" className="m-2 border-2">
                                     <img src={user.photoURL} className="user-img"></img>
                                 </Link>
@@ -37,7 +37,7 @@ const Navigation = () => {
                                     <Button className="login">Log in</Button>
                                 </Link>
                             )}
-                            {user?.email && (
+                            {user?.auth && (
                                 <Button onClick={logOut} className="login">
                                     Log Out
                                 </Button>

@@ -7,8 +7,7 @@ import useAuth from "../../Hooks/useAuth";
 import "./Profile.css";
 
 const Profile = () => {
-
-    const {user} = useAuth()
+    const { user } = useAuth();
     const [show, setShow] = useState(false);
 
     const form = useRef();
@@ -120,7 +119,7 @@ const Profile = () => {
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Email</p>
                                                     <h6 className="text-muted f-w-400">
-                                                        {user.email}
+                                                        {user?.providerData[0]?.email || user?.email}
                                                     </h6>
                                                 </div>
                                                 <div className="col-sm-6">
