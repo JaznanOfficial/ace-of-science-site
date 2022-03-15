@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getAuth,GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
+import { getAuth,GithubAuthProvider, GoogleAuthProvider,FacebookAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import initializeConfig from "../Firebase/Firebase.init";
 
 initializeConfig();
@@ -7,7 +7,8 @@ initializeConfig();
 const useFirebase = () => {
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
-    const githubProvider =  new GithubAuthProvider();
+    const githubProvider = new GithubAuthProvider();
+    const facebookProvider = new FacebookAuthProvider();
     const [user, setUser] = useState({});
     const [isLoading,setIsLoading] = useState(true)
 
@@ -19,6 +20,10 @@ const useFirebase = () => {
     const signinUsingGithub = () => {
         
         return signInWithPopup(auth, githubProvider)
+    }
+
+    const signinUsingFacebook = () => {
+        return signInWithPopup(auth,facebookProvider)
     }
 
     useEffect(() => {
@@ -47,6 +52,7 @@ const useFirebase = () => {
         isLoading,
         setIsLoading,
         signinUsingGithub,
+        signinUsingFacebook,
     };
 };
 

@@ -5,7 +5,7 @@ import useAuth from "../../Hooks/useAuth";
 import "./Signin.css";
 
 const Signin = () => {
-    const { signinUsingGoogle, setIsLoading, signinUsingGithub, user,setUser } = useAuth();
+    const { signinUsingGoogle, setIsLoading, signinUsingGithub,signinUsingFacebook, user,setUser } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
     const navigateUrl = location?.state?.from || "/home";
@@ -32,6 +32,17 @@ const Signin = () => {
             });
     };
 
+    const facebookSignin = () => {
+        signinUsingFacebook()
+        .then((result) => {
+            console.log(result)
+             navigate(navigateUrl);
+         })
+         .finally(() => {
+             setIsLoading(false);
+         });
+    }
+
     return (
         <div className="signin d-flex justify-content-center align-items-center mx-auto">
             <div className="signin-card p-3 m-3">
@@ -51,7 +62,7 @@ const Signin = () => {
                             <i className="fab fa-github"></i> Github
                         </h5>
                     </Button>
-                    <Button variant="secondary" size="lg" className="facebook">
+                    <Button variant="secondary" size="lg" className="facebook" onClick={facebookSignin}>
                         <h5>
                             <i className="fa-brands fa-facebook"></i> Facebook
                         </h5>
