@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import book from './book-icon.png';
+import { HashLoader } from 'react-spinners';
 
 import ScrollToTop from 'react-scroll-to-top';
 
@@ -11,6 +12,7 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 import axios from 'axios';
 
 export default function AcdmClass() {
+  let [color, setColor] = useState("#FE1A00");
   const [classes, setClasses] = useState([]);
   useEffect(() => {
     axios
@@ -28,7 +30,9 @@ export default function AcdmClass() {
       <ScrollToTop smooth color="#FE1A00" viewBox="0 0 250 250" />
       <Container>
         <h1>Academic Classes</h1>
-        
+        {classes.length === 0 && (
+          <h1 className='my-5 py-5'><HashLoader color={color} loading={true} size={150} /></h1>
+        )}
         <Row xs={1} md={3} className="g-4 my-3">
           {classes.map((classvalue, key) => (
             <Col className="my-0" key={key}>
