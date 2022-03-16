@@ -9,6 +9,7 @@ export var subjectOfClass = {
       description: "",
     },
     { name: "Mathematics", description: "" },
+    { name: "Science", description: "" },
   ],
   2: [
     {

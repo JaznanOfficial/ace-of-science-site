@@ -35,17 +35,7 @@ export default function ClassSubjects() {
       </Col>
   ));
 
-
-
-
-
-
-
-
-
-
-
-
+  
   return (
     <section>
       <ScrollToTop smooth color="#FE1A00" viewBox="0 0 250 250" />
