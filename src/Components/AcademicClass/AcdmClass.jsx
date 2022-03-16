@@ -19,7 +19,6 @@ export default function AcdmClass() {
         setClasses(res.data.academic);
       })
       .catch((error) => {
-        //
         console.log(error.response.data);
       });
   }, []);
