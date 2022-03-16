@@ -1,113 +1,114 @@
 export var subjectOfClass = {
   1: [
     {
-      name: "Bangla",
-      description: "",
+      name: 'Bangla',
+      description: '',
     },
     {
-      name: "English",
-      description: "",
+      name: 'English',
+      description: '',
     },
-    { name: "Mathematics", description: "" },
-    { name: "Mathematics", description: "" },
+    { name: 'Mathematics', description: '' },
+    { name: 'Science', description: '' },
   ],
   2: [
     {
-      name: "Bangla",
-      description: "",
+      name: 'Bangla',
+      description: '',
     },
     {
-      name: "English",
-      description: "",
+      name: 'English',
+      description: '',
     },
-    { name: "Mathematics", description: "" },
+    { name: 'Mathematics', description: '' },
   ],
   3: [
     {
-      name: "Bangla",
-      description: "",
+      name: 'Bangla',
+      description: '',
     },
     {
-      name: "English",
-      description: "",
+      name: 'English',
+      description: '',
     },
-    { name: "Mathematics", description: "" },
+    { name: 'Mathematics', description: '' },
   ],
   4: [
     {
-      name: "Bangla",
-      description: "",
+      name: 'Bangla',
+      description: '',
     },
     {
-      name: "English",
-      description: "",
+      name: 'English',
+      description: '',
     },
-    { name: "Mathematics", description: "" },
+    { name: 'Mathematics', description: '' },
   ],
   5: [
     {
-      name: "Bangla",
-      description: "",
+      name: 'Bangla',
+      description: '',
     },
     {
-      name: "English",
-      description: "",
+      name: 'English',
+      description: '',
     },
-    { name: "Mathematics", description: "" },
+    { name: 'Mathematics', description: '' },
   ],
   6: [
     {
-      name: "Bangla",
-      description: "",
+      name: 'Bangla',
+      description: '',
     },
     {
-      name: "English",
-      description: "",
+      name: 'English',
+      description: '',
     },
-    { name: "Mathematics", description: "" },
+    { name: 'Mathematics', description: '' },
   ],
   7: [
     {
-      name: "Bangla",
-      description: "",
+      name: 'Bangla',
+      description: '',
     },
     {
-      name: "English",
-      description: "",
+      name: 'English',
+      description: '',
     },
-    { name: "Mathematics", description: "" },
+    { name: 'Mathematics', description: '' },
   ],
   8: [
     {
-      name: "Bangla",
-      description: "",
+      name: 'Bangla',
+      description: '',
     },
     {
-      name: "English",
-      description: "",
+      name: 'English',
+      description: '',
     },
-    { name: "Mathematics", description: "" },
+    { name: 'Mathematics', description: '' },
   ],
-  "9-10": [
+  '9-10': [
     {
-      name: "Bangla",
-      description: "",
+      name: 'Bangla',
+      description: '',
     },
     {
-      name: "English",
-      description: "",
+      name: 'English',
+      description: '',
     },
-    { name: "Mathematics", description: "" },
+    { name: 'Mathematics', description: '' },
   ],
-  "11-12": [
+  '11-12': [
     {
-      name: "Bangla",
-      description: "",
+      name: 'Bangla',
+      description: '',
     },
     {
-      name: "English",
-      description: "",
+      name: 'English',
+      description: '',
     },
-    { name: "Mathematics", description: "" },
+    { name: 'Mathematics', description: '' },
   ],
 };
+export const api = 'https://aosserver.herokuapp.com/api/';

@@ -1,12 +1,12 @@
-import React from "react";
-import { Card, Col, Row } from "react-bootstrap";
-import { Link, useParams } from "react-router-dom";
-import book from "../AcademicClass/book-icon.png";
+import React from 'react';
+import { Card, Col, Row } from 'react-bootstrap';
+import { Link, useParams } from 'react-router-dom';
+import book from '../AcademicClass/book-icon.png';
 
-import ScrollToTop from "react-scroll-to-top";
+import ScrollToTop from 'react-scroll-to-top';
 
-import { subjectOfClass } from "../../dummydata";
-import "./classsubject.css";
+import { subjectOfClass } from '../../dummydata';
+import './classsubject.css';
 
 export default function ClassSubjects() {
     const { classnumber } = useParams();
