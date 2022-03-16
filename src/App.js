@@ -31,10 +31,38 @@ function App() {
                         <Route path="skills" element={<Skills />}></Route>
                         <Route path="others" element={<Skills />}></Route>
 
-                        <Route path="/academic-class" element={<PrivateRoute><AcdmClass /></PrivateRoute>} />
-                        <Route path="/academicclass/:classnumber" element={<PrivateRoute><ClassSubject /></PrivateRoute>} />
-                        <Route path="/lesson" element={<PrivateRoute><Lesson /></PrivateRoute>} />
-                        <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+                        <Route
+                            path="/academic-class"
+                            element={
+                                <PrivateRoute>
+                                    <AcdmClass />
+                                </PrivateRoute>
+                            }
+                        />
+                        <Route
+                            path="/academicclass/:classnumber"
+                            element={
+                                <PrivateRoute>
+                                    <ClassSubject />
+                                </PrivateRoute>
+                            }
+                        />
+                        <Route
+                            path="/lesson"
+                            element={
+                                <PrivateRoute>
+                                    <Lesson />
+                                </PrivateRoute>
+                            }
+                        />
+                        <Route
+                            path="/profile"
+                            element={
+                                <PrivateRoute>
+                                    <Profile />
+                                </PrivateRoute>
+                            }
+                        />
 
                         <Route path="/sign-in" element={<Signin />} />
                         <Route

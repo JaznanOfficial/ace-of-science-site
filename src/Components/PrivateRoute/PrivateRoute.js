@@ -7,12 +7,14 @@ import useAuth from '../../Hooks/useAuth';
 const PrivateRoute = ({ children, ...rest }) => {
     const { user,isLoading } = useAuth();
     let location = useLocation();
-    let [color, setColor] = useState("#ffffff");
+    let [color, setColor] = useState("#FE1A00");
 
     if (isLoading) {
-        return <HashLoader color={color} loading={isLoading} size={150} />
+        return <h1 className='my-5 py-5'><HashLoader color={color} loading={isLoading} size={150} /></h1>
     }
 
+
+    // 
     // {
     //     user.email?children:<Navigate to='/login' state={{from:location}}></Navigate>
     // }
