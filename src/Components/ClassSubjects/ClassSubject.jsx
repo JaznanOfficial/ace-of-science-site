@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import book from '../AcademicClass/book-icon.png';
@@ -9,8 +9,20 @@ import { subjectOfClass } from '../../dummydata';
 import './classsubject.css';
 
 export default function ClassSubjects() {
-    const { classnumber } = useParams();
-    const subjects = subjectOfClass[classnumber];
+    const { classnumber} = useParams();
+    // const subjects = subjectOfClass[classnumber];
+    // console.log(classnumber);
+    
+
+    const [subjects,setSubjects] = useState([])
+
+    useEffect((
+        fetch(`https://aosserver.herokuapp.com/api/lesson/subjects/${classnumber}`)
+            .then(res => res.json())
+            .then(data => setSubjects(data))
+            ),[])
+            console.log(subjects)
+
 
     //rendering view variable
 
