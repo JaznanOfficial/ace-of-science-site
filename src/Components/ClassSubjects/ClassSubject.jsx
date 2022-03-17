@@ -16,11 +16,11 @@ export default function ClassSubjects() {
 
     const [subjects,setSubjects] = useState([])
 
-    useEffect((
+    useEffect(() => {
         fetch(`https://aosserver.herokuapp.com/api/lesson/subjects/${classnumber}`)
             .then(res => res.json())
             .then(data => setSubjects(data))
-            ),[])
+    },[])
             console.log(subjects)
 
 
