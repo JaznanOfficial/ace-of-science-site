@@ -12,7 +12,7 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 import axios from 'axios';
 
 export default function AcdmClass() {
-  let [color, setColor] = useState("#FE1A00");
+  let [color, setColor] = useState('#FE1A00');
   const [classes, setClasses] = useState([]);
   useEffect(() => {
     axios
@@ -31,7 +31,9 @@ export default function AcdmClass() {
       <Container>
         <h1>Academic Classes</h1>
         {classes.length === 0 && (
-          <h1 className='my-5 py-5'><HashLoader color={color} loading={true} size={150} /></h1>
+          <h1 className="my-5 py-5">
+            <HashLoader color={color} loading={true} size={150} />
+          </h1>
         )}
         <Row xs={1} md={3} className="g-4 my-3">
           {classes.map((classvalue, key) => (

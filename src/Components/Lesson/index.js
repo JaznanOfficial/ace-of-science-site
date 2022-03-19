@@ -1,109 +1,96 @@
-import React, { useEffect, useState } from "react";
-import { Col, Row } from "react-bootstrap";
-import { Link, useLocation, useParams } from "react-router-dom";
-import "./lesson.css";
+import React, { useEffect, useState } from 'react';
+import { Col, Row } from 'react-bootstrap';
+import { Link, useLocation } from 'react-router-dom';
+import { HashLoader } from 'react-spinners';
 
-import DefultVideo from "./mov_bbb.mp4";
+import './lesson.css';
 
 export default function Lesson() {
-    const { search } = useLocation();
-    const { subjects } = useParams();
-    console.log(subjects);
-    const urlQueryObj = new URLSearchParams(search);
-    var Qvalue = {
-        type: urlQueryObj.get("type"),
-        class: urlQueryObj.get("class"),
-        subjectCode: urlQueryObj.get("subjectCode"),
-        v: urlQueryObj.get("v") || 0,
-    };
-    console.log(Qvalue.type);
-    const [lessonVideos, setLessoVideos] = useState([]);
+  const { search } = useLocation();
+  const urlQueryObj = new URLSearchParams(search);
+  var Qvalue = {
+    type: urlQueryObj.get('type'),
+    class: urlQueryObj.get('className'),
+    subjectCode: urlQueryObj.get('subjectCode'),
+    v: urlQueryObj.get('v') || 0,
+  };
 
-    useEffect(() => {
-        fetch(`https://aosserver.herokuapp.com/api/lesson/video/${Qvalue.subjectCode}`)
-            .then((res) => res.json())
-            .then((data) => setLessoVideos(data));
-    }, []);
-    console.log(lessonVideos);
+  const [lessonVideos, setLessoVideos] = useState([]);
+  const [lesson, setLesson] = useState();
 
-    return (
-        <section className="lesson-div container-fluid mx-2 my-5">
-            {/* {Qvalue.class + Qvalue.type + Qvalue.subject + Qvalue.v} */}
+  useEffect(() => {
+    setLesson(lessonVideos[Qvalue.v]);
+  }, [Qvalue.v]);
 
-            {lessonVideos.map((lessonVideo,key) => (
-                <Row key={key}>
-                    <Col md={8}>
-                        <div>
-                            <iframe
-                                width="560"
-                                height="315"
-                                src={lessonVideo.embedHref}
-                                title={lessonVideo.title}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen = {true}
-                            ></iframe>
-                        </div>
-                        <div>
-                            <h3>{lessonVideo.title}</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                                laborum dicta incidunt temporibus quia enim debitis architecto omnis
-                                veritatis fuga nisi quo a facere fugit perferendis, alias,
-                                voluptatem voluptates sapiente! Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Quisquam laborum dicta incidunt
-                                temporibus quia enim debitis architecto omnis veritatis fuga nisi
-                                quo a facere fugit perferendis, alias, voluptatem voluptates
-                                sapiente!{" "}
-                            </p>
-                        </div>
-                    </Col>
-                    <Col md={4}>
-                        <h6 className="py-1 my-2 border-bottom ">
-                            Class: {Qvalue.class} | Subject: {Qvalue.name}
-                        </h6>
-                        <div className="list-group list-group-flush ">
-                            {lessonVideos.map((lesson, key) => (
-                                <Link
-                                    key={key}
-                                    className="list-group-item text-start"
-                                    to={
-                                        "/lesson?type=" +
-                                        Qvalue.type +
-                                        "&className=" +
-                                        Qvalue.class +
-                                        "&subjectCode=" +
-                                        Qvalue.subjectCode +
-                                        "&v=" +
-                                        key
-                                    }
-                                >
-                                    {lesson}
-                                </Link>
-                            ))}
-                            {
-                                //     <Link
-                                //     to="#"
-                                //     className="list-group-item text-start disabled"
-                                //     aria-disabled="true"
-                                // >
-                                //     Quiz
-                                // </Link>
-                                // <Link
-                                //     to="#"
-                                //     className="list-group-item text-start disabled"
-                                //     aria-disabled="true"
-                                // >
-                                //     Exam
-                                // </Link>
-                            }
-                        </div>
-                        <Link to={"/academicclass/" + Qvalue.classnumber} className="btn btn-success m-2">
-                            Change Subject
-                        </Link>
-                    </Col>
-                </Row>
-            ))}
-        </section>
-    );
+  useEffect(() => {
+    fetch(
+      `https://aosserver.herokuapp.com/api/lesson/video/${Qvalue.subjectCode}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setLesson(data[Qvalue.v]);
+
+        setLessoVideos(data);
+      });
+  }, [Qvalue.subjectCode]);
+
+  return (
+    <section className="lesson-div container-fluid mx-2 my-5">
+      {/* {Qvalue.class + Qvalue.type + Qvalue.subject + Qvalue.v} */}
+      {!lesson ? (
+        <h1 className="my-5 py-5">
+          <HashLoader color={'#FE1A00'} loading={true} size={150} />
+        </h1>
+      ) : (
+        <Row>
+          <Col md={8}>
+            <>
+              <div className="video_player">
+                <iframe
+                  src={lesson.embedHref}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+
+              <div>
+                <h3>{lesson.title}</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam laborum dicta incidunt temporibus quia enim debitis
+                  architecto omnis veritatis fuga nisi quo a facere fugit
+                  perferendis, alias, voluptatem voluptates sapiente! Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                  laborum dicta incidunt temporibus quia enim debitis architecto
+                  omnis veritatis fuga nisi quo a facere fugit perferendis,
+                  alias, voluptatem voluptates sapiente!{' '}
+                </p>
+              </div>
+            </>
+          </Col>
+          <Col md={4}>
+            <div className="list-group list-group-flush ">
+              {lessonVideos.map((l, key) => (
+                <Link
+                  key={key}
+                  className="list-group-item text-start"
+                  to={`/lesson?type=${Qvalue.type}&className=${Qvalue.class}&subjectCode=${Qvalue.subjectCode}&v=${key}`}
+                >
+                  {l.title}
+                </Link>
+              ))}
+            </div>
+            <Link
+              to={'/academicclass/' + Qvalue.class}
+              className="btn btn-success m-2"
+            >
+              Change Subject
+            </Link>
+          </Col>
+        </Row>
+      )}
+    </section>
+  );
 }
