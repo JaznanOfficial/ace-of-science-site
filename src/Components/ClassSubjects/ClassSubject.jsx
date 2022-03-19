@@ -35,6 +35,11 @@ export default function ClassSubjects() {
   return (
     <section className="container my-5">
       <ScrollToTop smooth color="#FE1A00" viewBox="0 0 250 250" />
+      {subjects.length === 0 && (
+        <h1 className="my-5 py-5">
+          <HashLoader color={color} loading={true} size={150} />
+        </h1>
+      )}
       <Row xs={1} md={3} className="g-4 my-1">
         {subjects?.map((subj, key) => (
           <Col key={key}>
