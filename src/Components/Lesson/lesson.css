@@ -1,13 +1,28 @@
 .lesson-div{
-  background-color: #efeff6;
+  /* background-color: #efeff6; */
 }
 .video_player {
 }
 .list-group-item {
+  font-weight: 700 !important;
   background: none !important;
-  color: #5a2428 !important;
+  color: white !important;
+  margin-bottom: 3px;
+  border-radius: 15px !important;
   border-width: 0 0 1px 0 !important;
+  background-color: #FE1A00 !important;
 }
 .list-group-item:hover {
-  background-color: #f56962 !important;
+  color: #FE1A00 !important;
+  background-color: #FEF0EF !important;
+  border: 2px solid #FE1A00 !important;
+}
+.list-group-item:focus {
+  color: #FE1A00 !important;
+  background-color: #FEF0EF !important;
+  border: 2px solid #FE1A00 !important;
+}
+
+.lesson-title{
+  color: black !important;
 }
