@@ -7,8 +7,10 @@ import ScrollToTop from 'react-scroll-to-top';
 
 import { subjectOfClass } from '../../dummydata';
 import './classsubject.css';
+import { HashLoader } from 'react-spinners';
 
 export default function ClassSubjects() {
+    let [color, setColor] = useState("#FE1A00");
     const { classnumber} = useParams();
     // const subjects = subjectOfClass[classnumber];
     // console.log(classnumber);
@@ -16,6 +18,9 @@ export default function ClassSubjects() {
 
     const [subjects,setSubjects] = useState([])
 
+    {subjects.length === 0 && (
+        <h1 className='my-5 py-5'><HashLoader color={color} loading={true} size={150} /></h1>
+      )}
     useEffect(() => {
         fetch(`https://aosserver.herokuapp.com/api/lesson/subjects/${classnumber}`)
             .then(res => res.json())
@@ -34,7 +39,7 @@ export default function ClassSubjects() {
                     <Col>
                         <Link
                             to={
-                                "/lesson?type=ac&className=" + classnumber + "&subject=" + subj.name
+                                "/lesson?type=ac&className=" + classnumber + "&subjectCode=" + subj.subjectCode
                             }
                             key={key}
                         >
