@@ -3,6 +3,11 @@
 }
 .video_player {
 }
+
+.list-group {
+  height: 420px;
+  background-size: ;
+}
 .list-group-item {
   font-weight: 700 !important;
   background: none !important;
@@ -25,4 +30,10 @@
 
 .lesson-title{
   color: black !important;
+}
+
+@media only screen and (max-width:480px){
+  iframe{
+      height: 220px !important;
+  }
 }

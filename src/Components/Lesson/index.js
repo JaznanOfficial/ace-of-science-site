@@ -65,7 +65,7 @@ export default function Lesson() {
                         </>
                     </Col>
                     <Col md={4}>
-                        <div className="list-group list-group-flush py-3 ">
+                        <div className="list-group list-group-flush pb-3 overflow-auto">
                             {lessonVideos.map((l, key) => (
                                 <Link
                                     key={key}
