@@ -19,7 +19,7 @@ const Review = () => {
         const review = { name, email, text, rating };
         console.log(ratingRef.current);
 
-        fetch("http://localhost:5000/review", {
+        fetch("https://enigmatic-crag-58614.herokuapp.com/review", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
