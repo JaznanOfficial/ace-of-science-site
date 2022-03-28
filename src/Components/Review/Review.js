@@ -2,22 +2,26 @@ import React, { useRef } from "react";
 import Rating from "react-rating";
 import Swal from "sweetalert2";
 import "./Review.css";
+import useAuth from "../../Hooks/useAuth";
 import review from "./review.svg";
 
 const Review = () => {
+    const { user } = useAuth();
     const nameRef = useRef();
     const emailRef = useRef();
     const textRef = useRef();
     const ratingRef = useRef();
-
+    
+    
     const reviewHandler = (e) => {
         e.preventDefault();
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const text = textRef.current.value;
         var rating = ratingRef.current.state.value;
-        const review = { name, email, text, rating };
-        console.log(ratingRef.current);
+        const photo = user.photoURL;
+        const review = { name, email, text, rating,photo };
+        console.log(review);
 
         fetch("https://enigmatic-crag-58614.herokuapp.com/review", {
             method: "POST",
