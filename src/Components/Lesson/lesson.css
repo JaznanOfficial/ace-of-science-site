@@ -6,7 +6,7 @@
 
 .list-group {
   height: 420px;
-  background-size: ;
+  
 }
 .list-group-item {
   font-weight: 700 !important;
@@ -35,5 +35,11 @@
 @media only screen and (max-width:480px){
   iframe{
       height: 220px !important;
+  }
+}
+@media only screen and (min-width:480px)and(max-width:920px){
+  iframe{
+    width: 100% !important;
+      /* height: 220px !important; */
   }
 }
