@@ -6,8 +6,10 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import "./Blog.css";
 import ScrollToTop from "react-scroll-to-top";
+import { HashLoader } from "react-spinners";
 
 const Blogs = () => {
+
 
     const [blogs, setBlogs] = useState([])
     
@@ -65,31 +67,37 @@ const Blogs = () => {
 
             <h1 className="text-danger">Blogs</h1>
 
-            <Row xs={1} md={3} className="g-4">
-                {
-                    blogs.map(blog => <Col>
-                        <Card className="shadow">
-                            <Card.Img
-                                variant="top"
-                                src={blog.imageLink}
-                                className="m-3"
-                            />
-                            <Card.Body>
-                                <h3>{blog.heading}</h3>
-                                <Card.Text>
-                                    {blog.text.slice(0,200)}...
-                                </Card.Text>
-                            </Card.Body>
-                            <strong className="mb-3">
-                                <a href="#" className="see-more">
-                                    See More <i className="fas fa-arrow-circle-right"></i>{" "}
-                                </a>
-                            </strong>
-                        </Card>
-                    </Col>)
-                }
+            {blogs.length === 0 && (
+                <h1 className="my-5 py-5">
+                  <HashLoader color={'#FE1A00'} loading={true} size={150} />
+                </h1>
+              )}
+                <Row xs={1} md={3} className="g-4">
+                    {
+                        blogs.map(blog => <Col>
+                            <Card className="shadow">
+                                <Card.Img
+                                    variant="top"
+                                    src={blog.imageLink}
+                                    className="m-3"
+                                />
+                                <Card.Body>
+                                    <h3 className="text-danger">{blog.heading}</h3>
+                                    <Card.Text>
+                                        {blog.text.slice(0, 200)}...
+                                    </Card.Text>
+                                </Card.Body>
+                                <strong className="mb-3">
+                                    <a href="#" className="see-more">
+                                        See More <i className="fas fa-arrow-circle-right"></i>{" "}
+                                    </a>
+                                </strong>
+                            </Card>
+                        </Col>)
+                    }
                     
             </Row>
+            
         </div>
     );
 };
