@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,6 +8,16 @@ import "./Blog.css";
 import ScrollToTop from "react-scroll-to-top";
 
 const Blogs = () => {
+
+    const [blogs, setBlogs] = useState([])
+    
+    useEffect(() => {
+        fetch('https://enigmatic-crag-58614.herokuapp.com/blogs')
+            .then(res => res.json())
+        .then(data=>setBlogs(data))
+    },[])
+console.log(blogs);
+
     return (
         <div className="container my-5">
         <ScrollToTop smooth color="#FE1A00" viewBox="0 0 250 250" />
@@ -51,20 +61,18 @@ const Blogs = () => {
             <h1 className="text-danger">Blogs</h1>
 
             <Row xs={1} md={3} className="g-4">
-                {Array.from({ length: 6 }).map((_, idx) => (
-                    <Col>
+                {
+                    blogs.map(blog => <Col>
                         <Card className="shadow">
                             <Card.Img
                                 variant="top"
-                                src="https://thumbs.dreamstime.com/b/freedom-concept-silhouettes-broken-chain-birds-flying-sky-180470108.jpg"
+                                src={blog.imageLink}
                                 className="m-3"
                             />
                             <Card.Body>
-                                <h3>Card title</h3>
+                                <h3>{blog.heading}</h3>
                                 <Card.Text>
-                                    This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit
-                                    longer.
+                                    {blog.text}
                                 </Card.Text>
                             </Card.Body>
                             <strong className="mb-3">
@@ -73,8 +81,9 @@ const Blogs = () => {
                                 </a>
                             </strong>
                         </Card>
-                    </Col>
-                ))}
+                    </Col>)
+                }
+                    
             </Row>
         </div>
     );
