@@ -16,47 +16,52 @@ const Blogs = () => {
             .then(res => res.json())
         .then(data=>setBlogs(data))
     },[])
-console.log(blogs);
+    console.log(blogs);
+    
+    
+
 
     return (
         <div className="container my-5">
         <ScrollToTop smooth color="#FE1A00" viewBox="0 0 250 250" />
-            <div className="my-5 h-100">
-                <h1 className="text-danger">Featured Blog</h1>
+            {
+                // <div className="my-5 h-100">
+            //     <h1 className="text-danger">Featured Blog</h1>
 
-                <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-                    <Row xs={1} md={2} className="g-4">
-                        {Array.from({ length: 4 }).map((_, idx) => (
-                            <SwiperSlide>
-                                <Card className="d-lg-flex flex-lg-row justify-content-center align-items-center p-3 text-start ">
-                                    <div>
-                                        <img
-                                            src="https://thumbs.dreamstime.com/b/freedom-concept-silhouettes-broken-chain-birds-flying-sky-180470108.jpg"
-                                            className="swiper-image rounded"
-                                            alt="img not found"
-                                        />
-                                    </div>
-                                    <div>
-                                        <Card.Body>
-                                            <Card.Title>Card title</Card.Title>
-                                            <Card.Text>
-                                                This is a longer card with supporting text below as
-                                                a natural lead-in to additional content. This
-                                                content is a little bit longer.
-                                            </Card.Text>
-                                        </Card.Body>
-                                    </div>
-                                    <strong className="mb-3 text-center">
-                                        <a href="#" className="see-more">
-                                            See More <i className="fas fa-arrow-circle-right"></i>{" "}
-                                        </a>
-                                    </strong>
-                                </Card>
-                            </SwiperSlide>
-                        ))}
-                    </Row>
-                </Swiper>
-            </div>
+            //     <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+            //         <Row xs={1} md={2} className="g-4">
+            //             {Array.from({ length: 4 }).map((_, idx) => (
+            //                 <SwiperSlide>
+            //                     <Card className="d-lg-flex flex-lg-row justify-content-center align-items-center p-3 text-start ">
+            //                         <div>
+            //                             <img
+            //                                 src="https://thumbs.dreamstime.com/b/freedom-concept-silhouettes-broken-chain-birds-flying-sky-180470108.jpg"
+            //                                 className="swiper-image rounded"
+            //                                 alt="img not found"
+            //                             />
+            //                         </div>
+            //                         <div>
+            //                             <Card.Body>
+            //                                 <Card.Title>Card title</Card.Title>
+            //                                 <Card.Text>
+            //                                     This is a longer card with supporting text below as
+            //                                     a natural lead-in to additional content. This
+            //                                     content is a little bit longer.
+            //                                 </Card.Text>
+            //                             </Card.Body>
+            //                         </div>
+            //                         <strong className="mb-3 text-center">
+            //                             <a href="#" className="see-more">
+            //                                 See More <i className="fas fa-arrow-circle-right"></i>{" "}
+            //                             </a>
+            //                         </strong>
+            //                     </Card>
+            //                 </SwiperSlide>
+            //             ))}
+            //         </Row>
+            //     </Swiper>
+            // </div>
+        }
 
             <h1 className="text-danger">Blogs</h1>
 
@@ -72,7 +77,7 @@ console.log(blogs);
                             <Card.Body>
                                 <h3>{blog.heading}</h3>
                                 <Card.Text>
-                                    {blog.text}
+                                    {blog.text.slice(0,200)}...
                                 </Card.Text>
                             </Card.Body>
                             <strong className="mb-3">
