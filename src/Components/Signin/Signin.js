@@ -13,7 +13,7 @@ const Signin = () => {
     const GoogleSignin = () => {
         signinUsingGoogle()
             .then((result) => {
-                console.log(result)
+         
                 navigate(navigateUrl);
             })
             .finally(() => {
@@ -24,7 +24,7 @@ const Signin = () => {
     const githubSignin = () => {
         signinUsingGithub()
             .then((result) => {
-               console.log(result)
+         
                 navigate(navigateUrl);
             })
             .finally(() => {
@@ -35,7 +35,7 @@ const Signin = () => {
     const facebookSignin = () => {
         signinUsingFacebook()
         .then((result) => {
-            console.log(result)
+          
              navigate(navigateUrl);
          })
          .finally(() => {

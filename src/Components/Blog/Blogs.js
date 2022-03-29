@@ -7,6 +7,7 @@ import { Pagination } from "swiper";
 import "./Blog.css";
 import ScrollToTop from "react-scroll-to-top";
 import { HashLoader } from "react-spinners";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
 
@@ -18,7 +19,7 @@ const Blogs = () => {
             .then(res => res.json())
         .then(data=>setBlogs(data))
     },[])
-    console.log(blogs);
+
     
     
 
@@ -88,9 +89,9 @@ const Blogs = () => {
                                     </Card.Text>
                                 </Card.Body>
                                 <strong className="mb-3">
-                                    <a href="#" className="see-more">
+                                    <Link to={`/single-blog/${blog._id}`} className="see-more">
                                         See More <i className="fas fa-arrow-circle-right"></i>{" "}
-                                    </a>
+                                    </Link>
                                 </strong>
                             </Card>
                         </Col>)

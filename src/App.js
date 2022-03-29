@@ -16,6 +16,7 @@ import Profile from "./Components/Profile/Profile";
 import Skills from "./Components/Skills/Skills";
 import AuthProvider from "./Contexts/AuthProvider";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import SingleBlog from "./Components/SingleBlog/SingleBlog";
 
 function App() {
     return (
@@ -64,7 +65,6 @@ function App() {
                             }
                         />
 
-                        <Route path="/sign-in" element={<Signin />} />
                         <Route
                             path="/review"
                             element={
@@ -73,6 +73,15 @@ function App() {
                                 </PrivateRoute>
                             }
                         />
+                        <Route
+                            path="/single-blog/:id"
+                            element={
+                                <PrivateRoute>
+                                    <SingleBlog />
+                                </PrivateRoute>
+                            }
+                        />
+                        <Route path="/sign-in" element={<Signin />} />
                     </Routes>
                     <Footer></Footer>
                 </BrowserRouter>

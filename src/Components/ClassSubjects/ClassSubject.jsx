@@ -13,7 +13,7 @@ export default function ClassSubjects() {
   let [color, setColor] = useState('#FE1A00');
   const { classnumber } = useParams();
   // const subjects = subjectOfClass[classnumber];
-  // console.log(classnumber);
+
 
   const [subjects, setSubjects] = useState([]);
 

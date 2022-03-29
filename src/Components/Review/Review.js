@@ -21,7 +21,7 @@ const Review = () => {
         var rating = ratingRef.current.state.value;
         const photo = user.photoURL;
         const review = { name, email, text, rating,photo };
-        console.log(review);
+  
 
         fetch("https://enigmatic-crag-58614.herokuapp.com/review", {
             method: "POST",

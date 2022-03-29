@@ -13,7 +13,7 @@ const useFirebase = () => {
     const [isLoading,setIsLoading] = useState(true)
 
     const signinUsingGoogle = () => {
-        // console.log("signing in...");
+     
         return signInWithPopup(auth, provider);
     };
 
@@ -30,7 +30,6 @@ const useFirebase = () => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-                console.log(user);
             } else {
                 setUser({});
             }

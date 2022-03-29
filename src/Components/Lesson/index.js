@@ -31,7 +31,7 @@ export default function Lesson() {
                 setLessoVideos(data);
             });
     }, [Qvalue.subjectCode]);
-    console.log(lesson);
+  
 
     return (
         <section className="lesson-div container-fluid my-5">

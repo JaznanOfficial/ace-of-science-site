@@ -19,7 +19,7 @@ const Contact = () => {
             )
             .then(
                 (result) => {
-                    console.log(result.text);
+                   
                     swal({
                         title: "Good job!",
                         text: "Your message successfully sent! Please check your email",
@@ -28,7 +28,7 @@ const Contact = () => {
                     e.target.reset();
                 },
                 (error) => {
-                    console.log(error.text);
+               
                     Swal({
                         title: "Oops!",
                         text: `{error.text}`,
