@@ -10,19 +10,45 @@ const Profile = () => {
     const { user } = useAuth();
     const [show, setShow] = useState(false);
 
-    const form = useRef();
+    const emailRef = useRef();
+    const addressRef = useRef();
+    const schoolRef = useRef();
+    const professionRef = useRef();
+    const phoneRef = useRef();
+
+ 
     const handleClose = () => {
         setShow(false);
     };
     const handleShow = () => setShow(true);
     const saveChange = (e) => {
         e.preventDefault();
-        Swal({
+        const userEmail = emailRef.current.value;
+        const address = addressRef.current.value;
+        const school = schoolRef.current.value;
+        const profession = professionRef.current.value;
+        const phone = phoneRef.current.value;
+        const profile = { userEmail, address, school, profession, phone };
+        console.log(profile);
+        fetch("https://enigmatic-crag-58614.herokuapp.com/profile", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(profile),
+        });
+
+
+        new Swal({
             title: "Good job!",
             text: "Your message successfully sent! Please check your email",
             icon: "success",
         });
+        e.target.reset()
+        handleClose()
     };
+
+    
     return (
         <div className="profile">
             <div className="page-content page-container" id="page-content">
@@ -55,14 +81,29 @@ const Profile = () => {
                                                 </Modal.Header>
                                                 <Modal.Body>
                                                     <div className="right">
-                                                        <form action="#" ref={form}>
+                                                        <form
+                                                            action="#"
+                                                            onSubmit={(saveChange)}
+                                                        >
+                                                            <div className="fields">
+                                                                <div className="field me-1">
+                                                                    <input
+                                                                        type="email"
+                                                                        placeholder="Email"
+                                                                        name="address"
+                                                                        ref={emailRef}
+                                                                        value={user?.providerData[0]?.email ||
+                                                                            user?.email}
+                                                                    />
+                                                                </div>
+                                                            </div>
                                                             <div className="fields">
                                                                 <div className="field me-1">
                                                                     <input
                                                                         type="address"
-                                                                        placeholder="Address"
+                                                                        placeholder="Home Address"
                                                                         name="address"
-                                                                        required
+                                                                        ref={addressRef}
                                                                     />
                                                                 </div>
                                                             </div>
@@ -71,7 +112,7 @@ const Profile = () => {
                                                                     type="text"
                                                                     placeholder="School Name"
                                                                     name="school"
-                                                                    required
+                                                                    ref={schoolRef}
                                                                 />
                                                             </div>
                                                             <div className="field">
@@ -79,7 +120,7 @@ const Profile = () => {
                                                                     type="text"
                                                                     placeholder="Profession"
                                                                     name="profession"
-                                                                    required
+                                                                    ref={professionRef}
                                                                 />
                                                             </div>
                                                             <div className="field">
@@ -87,26 +128,15 @@ const Profile = () => {
                                                                     type="number"
                                                                     placeholder="Your Phone Number"
                                                                     name="phone-number"
-                                                                    optional
+                                                                    ref={phoneRef}
                                                                 />
                                                             </div>
+                                                            <Button variant="primary" type="submit">
+                                                                Save Changes
+                                                            </Button>
                                                         </form>
                                                     </div>
                                                 </Modal.Body>
-                                                <Modal.Footer>
-                                                    <Button
-                                                        variant="secondary"
-                                                        onClick={handleClose}
-                                                    >
-                                                        Close
-                                                    </Button>
-                                                    <Button
-                                                        variant="primary"
-                                                        onClick={(saveChange, handleClose)}
-                                                    >
-                                                        Save Changes
-                                                    </Button>
-                                                </Modal.Footer>
                                             </Modal>
                                         </div>
                                     </div>
@@ -119,7 +149,8 @@ const Profile = () => {
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Email</p>
                                                     <h6 className="text-muted f-w-400">
-                                                        {user?.providerData[0]?.email || user?.email}
+                                                        {user?.providerData[0]?.email ||
+                                                            user?.email}
                                                     </h6>
                                                 </div>
                                                 <div className="col-sm-6">

@@ -1,71 +1,52 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Col, Row } from "react-bootstrap";
+import Rating from "react-rating";
 import "./Testimonial.css";
 
 const Testimonials = () => {
+    const [ratings, setRatings] = useState([]);
+
+    useEffect(() => {
+        fetch("https://enigmatic-crag-58614.herokuapp.com/review")
+            .then((res) => res.json())
+            .then((data) => setRatings(data));
+    }, []);
+    console.log(ratings);
+
     return (
         <div className="mt-5">
             <section className="home-testimonial p-5">
                 <h2 className="pt-5">Explore the students experience</h2>
 
-                <Row xs={1} md={3} className="g-4 mt-5">
-                    <Col>
-                        <Card>
-                            <Card.Body>
-                                <Card.Text>
-                                    "This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit
-                                    longer."
-                                </Card.Text>
-                            </Card.Body>
-                            <img
-                                variant="top"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4GcwgE8P_j_I5SQBXQNrtxp31bk0fkNdFEA&usqp=CAU"
-                                alt="img not found"
-                                className="mx-auto"
-                            />
-                            <Card.Title>Card title</Card.Title>
-                            <p>profession</p>
-                        </Card>
-                    </Col>
-                    <Col>
-                        <Card>
-                            <Card.Body>
-                                <Card.Text>
-                                    "This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit
-                                    longer."
-                                </Card.Text>
-                            </Card.Body>
-                            <img
-                                variant="top"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4GcwgE8P_j_I5SQBXQNrtxp31bk0fkNdFEA&usqp=CAU"
-                                alt="img not found"
-                                className="mx-auto"
-                            />
-                            <Card.Title>Card title</Card.Title>
-                            <p>profession</p>
-                        </Card>
-                    </Col>
-                    <Col>
-                        <Card>
-                            <Card.Body>
-                                <Card.Text>
-                                    "This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit
-                                    longer."
-                                </Card.Text>
-                            </Card.Body>
-                            <img
-                                variant="top"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4GcwgE8P_j_I5SQBXQNrtxp31bk0fkNdFEA&usqp=CAU"
-                                alt="img not found"
-                                className="mx-auto"
-                            />
-                            <Card.Title>Card title</Card.Title>
-                            <p>profession</p>
-                        </Card>
-                    </Col>
+                <Row xs={1} md={3} className="g-4 mt-5 flex-row-reverse">
+                    {ratings.slice(0, 3).map((rating) => (
+                        <Col>
+                            <Card>
+                                <Card.Body className="d-flex flex-column justify-content-center align-items-center">
+                                    <div>
+                                    <Card.Text>{rating.text}</Card.Text>
+                                    </div>
+                                    </Card.Body>
+                                    <div className="mb-2 mx-lg-5 mx-3 text-center">
+                                        <Rating
+                                            className="text-danger"
+                                            emptySymbol="fa fa-star-o"
+                                            fullSymbol="fa fa-star"
+                                            initialRating={rating.rating}
+                                            readonly
+                                        />
+                                    </div>
+                                <img
+                                    variant="top"
+                                    src={rating.photo}
+                                    alt="img not found"
+                                    className="mx-auto"
+                                />
+                                <Card.Title>{rating.name}</Card.Title>
+                                <p>{rating.profession}</p>
+                            </Card>
+                        </Col>
+                    ))}
                 </Row>
             </section>
         </div>

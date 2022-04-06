@@ -5,22 +5,25 @@ import "./Review.css";
 import useAuth from "../../Hooks/useAuth";
 import review from "./review.svg";
 
+
 const Review = () => {
     const { user } = useAuth();
     const nameRef = useRef();
     const emailRef = useRef();
     const textRef = useRef();
     const ratingRef = useRef();
+    const professionRef = useRef();
     
     
     const reviewHandler = (e) => {
         e.preventDefault();
         const name = nameRef.current.value;
         const email = emailRef.current.value;
+        const profession = professionRef.current.value;
         const text = textRef.current.value;
         var rating = ratingRef.current.state.value;
         const photo = user.photoURL;
-        const review = { name, email, text, rating,photo };
+        const review = { name, email, text, rating,photo,profession };
   
 
         fetch("https://enigmatic-crag-58614.herokuapp.com/review", {
@@ -30,6 +33,8 @@ const Review = () => {
             },
             body: JSON.stringify(review),
         });
+
+        
         new Swal({
             title: "Good job!",
             text: "Your review successfully sent! Please stay with us",
@@ -37,6 +42,7 @@ const Review = () => {
         });
 
         e.target.reset();
+        window.location.reload()
      
     };
     return (
@@ -59,6 +65,7 @@ const Review = () => {
                                         required
                                     />
                                 </div>
+                                
                                 <div className="field email">
                                     <input
                                         type="email"
@@ -68,7 +75,17 @@ const Review = () => {
                                         required
                                     />
                                 </div>
+                                
                             </div>
+                            <div className="field email">
+                                    <input
+                                        type="text"
+                                        placeholder="Profession"
+                                        name="profession"
+                                        ref={professionRef}
+                                        required
+                                    />
+                                </div>
 
                             <div className="field textarea">
                                 <textarea
