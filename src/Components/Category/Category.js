@@ -52,8 +52,8 @@ const Category = () => {
               </div>
               <Card.Body>
                 <Card.Title>
-                  <h2>Another</h2>
-                  <h4>Another topics12</h4>
+                  <h2>Special</h2>
+                  <h4>Special Subject</h4>
                 </Card.Title>
               </Card.Body>
             </Card>

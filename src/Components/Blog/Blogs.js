@@ -17,9 +17,12 @@ const Blogs = () => {
     useEffect(() => {
         fetch('https://enigmatic-crag-58614.herokuapp.com/blogs')
             .then(res => res.json())
-        .then(data=>setBlogs(data))
+            .then(data => {
+                setBlogs(data)
+               
+            })
     },[])
-
+    const reverseBlogs = [...blogs].reverse()
     
     
 
@@ -74,8 +77,9 @@ const Blogs = () => {
                 </h1>
               )}
                 <Row xs={1} md={3} className="g-4">
-                    {
-                        blogs.map(blog => <Col>
+                {
+                    
+                    reverseBlogs.map(blog => <Col>
                             <Card className="shadow">
                                 <Card.Img
                                     variant="top"
