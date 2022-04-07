@@ -24,6 +24,7 @@ const Review = () => {
         var rating = ratingRef.current.state.value;
         const photo = user.photoURL;
         const review = { name, email, text, rating,photo,profession };
+        console.log({ name, email, text, rating,photo,profession }); ;
   
 
         fetch("https://enigmatic-crag-58614.herokuapp.com/review", {
@@ -39,10 +40,10 @@ const Review = () => {
                 text: "Your review successfully sent! Please stay with us",
                 icon: "success",
             });
-    
             e.target.reset();
-            window.location.reload()
+            
         })
+        // window.location.reload()
         
         
      
