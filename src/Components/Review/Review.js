@@ -32,17 +32,19 @@ const Review = () => {
                 "content-type": "application/json",
             },
             body: JSON.stringify(review),
-        });
-
+        })
+        .then(res => {
+            new Swal({
+                title: "Good job!",
+                text: "Your review successfully sent! Please stay with us",
+                icon: "success",
+            });
+    
+            e.target.reset();
+            window.location.reload()
+        })
         
-        new Swal({
-            title: "Good job!",
-            text: "Your review successfully sent! Please stay with us",
-            icon: "success",
-        });
-
-        e.target.reset();
-        window.location.reload()
+        
      
     };
     return (
