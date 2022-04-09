@@ -1,9 +1,11 @@
 .single-blog{
     /* border: 2px solid crimson; */
+    width: 90% !important;
+
 }
 
 .single-blog img{
-    width: 62rem;
+    width: 50rem;
 }
 
 
@@ -13,10 +15,10 @@
         width: 100% !important;
     }
     .single-blog{
-        margin: 0 50px !important;
+        /* margin: 0 300px !important; */
         width: 100% !important;
     }
-    .container{
+    /* .container{
         width: 100% !important;
-    }
+    } */
   }

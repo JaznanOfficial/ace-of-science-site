@@ -11,7 +11,7 @@ const Testimonials = () => {
             .then((res) => res.json())
             .then((data) => setRatings(data));
     }, []);
-    const reverseRatings = [...ratings].reverse();
+   
 
     return (
         <div className="mt-5">
@@ -19,7 +19,7 @@ const Testimonials = () => {
                 <h2 className="pt-5">Explore the students experience</h2>
 
                 <Row xs={1} md={3} className="g-4 mt-5">
-                    {reverseRatings.slice(0, 3).map((rating) => (
+                    {ratings.slice(0, 3).map((rating) => (
                         <Col>
                             <Card>
                                 <Card.Body className="d-flex flex-column justify-content-center align-items-center">

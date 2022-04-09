@@ -11,20 +11,20 @@ const SingleBlog = () => {
     const [singleData, setSingleData] = useState([])
     
     useEffect(() => {
-        fetch('https://enigmatic-crag-58614.herokuapp.com/blogs')
+        fetch(`http://localhost:5000/single-blog/${id}`)
             .then(res => res.json())
         .then(data => setSingleData(data))
     }, [])
    
 
-    const matchedData = singleData.find(singleBlog => singleBlog._id === id)
+ 
 
 
-    const {imageLink, heading, text} = matchedData ||{}
+    const {imageLink, heading, text} = singleData ||{}
 
 
     return (
-        <div className="single-blog container w-75">
+        <div className="single-blog px-3 mx-auto">
             <div className="image-div mb-5 p-0">
                 <img
                     src={imageLink}

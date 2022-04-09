@@ -18,11 +18,13 @@ import AuthProvider from "./Contexts/AuthProvider";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import SingleBlog from "./Components/SingleBlog/SingleBlog";
 
+
 function App() {
     return (
         <div className="App">
             <AuthProvider>
                 <BrowserRouter>
+                
                     <Navigation></Navigation>
                     <Routes>
                         <Route path="/" element={<HomePage></HomePage>}></Route>

@@ -7,7 +7,8 @@ const Achievement = () => {
         <div className="container my-5">
             <div className="text-start mb-4">
                 {" "}
-                <h1>Our Achievements</h1>
+                <h1 className="text-center">Our Events </h1>
+                <h1 className="text-center"><strong className="text-danger">PHOTOGRAPHY CONTEST 2.0</strong></h1>
             </div>
             <Row xs={1} md={4} className="g-4">
                 <Col>
