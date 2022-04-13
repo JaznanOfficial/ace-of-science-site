@@ -55,7 +55,7 @@ const Profile = () => {
     const [profileData,setProfileData] = useState({})
 
     useEffect(()=>{
-        fetch(`https://enigmatic-crag-58614.herokuapp.com/${user?.providerData[0]?.email || user?.email}`)
+        fetch(`http://localhost:5000/profile/${user?.providerData[0]?.email || user?.email}`)
             .then(res => res.json())
         .then(data=> setProfileData(data))
     },[])
@@ -66,7 +66,7 @@ const Profile = () => {
         <div className="profile">
             <div className="page-content page-container" id="page-content">
                 <div className="padding">
-                    <div className="row container d-flex justify-content-center">
+                    <div className="container d-flex justify-content-center mt-3">
                         <div className="col-xl-6 col-md-12">
                             <div className="card user-card-full">
                                 <div className="row m-l-0 m-r-0">
