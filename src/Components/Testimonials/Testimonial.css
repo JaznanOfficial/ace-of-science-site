@@ -9,14 +9,14 @@
     font-weight: 700
 }
 
-.home-testimonial .card{
+.home-testimonial .card, .swiper-slide{
     color: #8483A2 !important;
-    height: 350px !important;
+    height: 400px !important;
 }
 .home-testimonial .card img{
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    border-radius: 50% !important;
+    width: 60px !important;
+    height: 60px !important;
 }
 @media only screen and (max-width: 520px) {
     .home-testimonial .card{
