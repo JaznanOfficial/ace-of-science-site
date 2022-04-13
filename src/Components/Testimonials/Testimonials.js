@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { Pagination } from "swiper";
 
 const Testimonials = () => {
     const [ratings, setRatings] = useState([]);
@@ -21,18 +22,34 @@ const Testimonials = () => {
     return (
         <div className="mt-5">
             <section className="home-testimonial p-5">
-                <h2 className="pt-5">Explore the students experience</h2>
+                <h2 className="pt-5 mb-3">Explore the students experience</h2>
 
 
 
                 <Swiper
+                breakpoints={{
+                    // when window width is >= 640px
+                    640: {
+                      width: 640,
+                      slidesPerView: 1,
+                    },
+                    // when window width is >= 768px
+                    768: {
+                      width: 768,
+                      slidesPerView: 2,
+                    },
+                  }}
+                pagination={{
+                    dynamicBullets: true,
+                  }}
+                  modules={[Pagination]}
                 spaceBetween={50}
-                slidesPerView={3}
+                // slidesPerView={3}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
                 >
                 
-                        {ratings.slice(0, 3).map((rating) => (
+                        {ratings.slice(0, 9).map((rating) => (
                   
                 <SwiperSlide className="card">
                     

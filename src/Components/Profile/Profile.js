@@ -55,7 +55,7 @@ const Profile = () => {
     const [profileData,setProfileData] = useState({})
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/profile/${user?.providerData[0]?.email || user?.email}`)
+        fetch(`https://enigmatic-crag-58614.herokuapp.com/profile/${user?.providerData[0]?.email || user?.email}`)
             .then(res => res.json())
         .then(data=> setProfileData(data))
     },[])
@@ -77,7 +77,7 @@ const Profile = () => {
                                                 <img
                                                     src={user.photoURL}
                                                     className="img-radius"
-                                                    alt="User-Profile-Image"
+                                                    alt="img not found"
                                                 />{" "}
                                             </div>
                                             <h4 className="f-w-600">{user.displayName}</h4>
