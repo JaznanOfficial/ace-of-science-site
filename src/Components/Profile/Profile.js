@@ -32,10 +32,10 @@ const Profile = () => {
         console.log(profile);
 
 
-        fetch("https://enigmatic-crag-58614.herokuapp.com/profile", {
-            method: "POST",
+        fetch(`https://enigmatic-crag-58614.herokuapp.com/${user?.providerData[0]?.email || user?.email}`, {
+            method: "PUT",
             headers: {
-                "content-type": "application/json",
+                "content-type": "application/json"
             },
             body: JSON.stringify(profile),
         });
@@ -55,12 +55,12 @@ const Profile = () => {
     const [profileData,setProfileData] = useState({})
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/profile/${user?.providerData[0]?.email || user?.email}`)
+        fetch(`https://enigmatic-crag-58614.herokuapp.com/${user?.providerData[0]?.email || user?.email}`)
             .then(res => res.json())
         .then(data=> setProfileData(data))
     },[])
     const { address,phone,profession,school } = profileData;
-    console.log(address);
+   
     
     return (
         <div className="profile">
@@ -80,8 +80,8 @@ const Profile = () => {
                                                     alt="User-Profile-Image"
                                                 />{" "}
                                             </div>
-                                            <h6 className="f-w-600">{user.displayName}</h6>
-                                            <p>Web Designer</p>{" "}
+                                            <h4 className="f-w-600">{user.displayName}</h4>
+                                            <p>{profession}</p>{" "}
                                             <i
                                                 variant="primary"
                                                 type="button"
