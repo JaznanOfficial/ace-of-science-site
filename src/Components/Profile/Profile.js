@@ -9,7 +9,7 @@ import "./Profile.css";
 const Profile = () => {
     const { user } = useAuth();
     const [show, setShow] = useState(false);
-
+console.log(user);
     const emailRef = useRef();
     const addressRef = useRef();
     const schoolRef = useRef();
@@ -55,7 +55,7 @@ const Profile = () => {
     const [profileData,setProfileData] = useState({})
 
     useEffect(()=>{
-        fetch(`https://enigmatic-crag-58614.herokuapp.com/profile/${user?.providerData[0]?.email || user?.email}`)
+        fetch(`https://enigmatic-crag-58614.herokuapp.com/${user?.providerData[0]?.email || user?.email}`)
             .then(res => res.json())
         .then(data=> setProfileData(data))
     },[])
