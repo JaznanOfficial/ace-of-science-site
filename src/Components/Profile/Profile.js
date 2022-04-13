@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
@@ -30,6 +30,8 @@ const Profile = () => {
         const phone = phoneRef.current.value;
         const profile = { userEmail, address, school, profession, phone };
         console.log(profile);
+
+
         fetch("https://enigmatic-crag-58614.herokuapp.com/profile", {
             method: "POST",
             headers: {
@@ -47,7 +49,18 @@ const Profile = () => {
         e.target.reset()
         handleClose()
     };
+    
 
+    // getting profile data------------------------>
+    const [profileData,setProfileData] = useState({})
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/profile/${user?.providerData[0]?.email || user?.email}`)
+            .then(res => res.json())
+        .then(data=> setProfileData(data))
+    },[])
+    const { address,phone,profession,school } = profileData;
+    console.log(address);
     
     return (
         <div className="profile">
@@ -94,6 +107,7 @@ const Profile = () => {
                                                                         ref={emailRef}
                                                                         value={user?.providerData[0]?.email ||
                                                                             user?.email}
+                                                                        disabled
                                                                     />
                                                                 </div>
                                                             </div>
@@ -156,7 +170,7 @@ const Profile = () => {
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Phone</p>
                                                     <h6 className="text-muted f-w-400">
-                                                        98979989898
+                                                        {phone}
                                                     </h6>
                                                 </div>
                                             </div>
@@ -167,13 +181,13 @@ const Profile = () => {
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Home</p>
                                                     <h6 className="text-muted f-w-400">
-                                                        Sam Disuja
+                                                    {address}
                                                     </h6>
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">School</p>
                                                     <h6 className="text-muted f-w-400">
-                                                        Dinoter husainm
+                                                        {school}
                                                     </h6>
                                                 </div>
                                             </div>
