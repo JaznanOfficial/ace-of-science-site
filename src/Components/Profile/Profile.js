@@ -1,22 +1,22 @@
-import React, { useRef, useState,useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Button, Modal } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import Swal from "sweetalert2";
 import useAuth from "../../Hooks/useAuth";
 import "./Profile.css";
 
 const Profile = () => {
+    const navigate = useNavigate();
     const { user } = useAuth();
     const [show, setShow] = useState(false);
-console.log(user);
+    console.log(user);
     const emailRef = useRef();
     const addressRef = useRef();
     const schoolRef = useRef();
     const professionRef = useRef();
     const phoneRef = useRef();
 
- 
     const handleClose = () => {
         setShow(false);
     };
@@ -31,37 +31,46 @@ console.log(user);
         const profile = { userEmail, address, school, profession, phone };
         console.log(profile);
 
-
-        fetch(`https://enigmatic-crag-58614.herokuapp.com/${user?.providerData[0]?.email || user?.email}`, {
-            method: "PUT",
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify(profile),
-        });
-
+        fetch(
+            `https://enigmatic-crag-58614.herokuapp.com/${
+                user?.providerData[0]?.email || user?.email
+            }`,
+            {
+                method: "PUT",
+                headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify(profile),
+            }
+        );
 
         new Swal({
             title: "Good job!",
             text: "Your message successfully sent! Please check your email",
             icon: "success",
         });
-        e.target.reset()
-        handleClose()
+        e.target.reset();
+        handleClose();
     };
-    
 
     // getting profile data------------------------>
-    const [profileData,setProfileData] = useState({})
+    const [profileData, setProfileData] = useState({});
 
-    useEffect(()=>{
-        fetch(`https://enigmatic-crag-58614.herokuapp.com/${user?.providerData[0]?.email || user?.email}`)
+    useEffect(() => {
+        fetch(
+            `http://localhost:5000/profile?email=${user?.providerData[0]?.email || user?.email}`,
+            {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem("idToken")}`,
+                },
+            }
+        )
             .then(res => res.json())
-        .then(data=> setProfileData(data))
-    },[])
-    const { address,phone,profession,school } = profileData;
-   
-    
+            .then(data => setProfileData(data))
+    }, []);
+    console.log(profileData);
+    const { address, phone, profession, school } = profileData;
+
     return (
         <div className="profile">
             <div className="page-content page-container" id="page-content">
@@ -94,10 +103,7 @@ console.log(user);
                                                 </Modal.Header>
                                                 <Modal.Body>
                                                     <div className="right">
-                                                        <form
-                                                            action="#"
-                                                            onSubmit={(saveChange)}
-                                                        >
+                                                        <form action="#" onSubmit={saveChange}>
                                                             <div className="fields">
                                                                 <div className="field me-1">
                                                                     <input
@@ -105,8 +111,11 @@ console.log(user);
                                                                         placeholder="Email"
                                                                         name="address"
                                                                         ref={emailRef}
-                                                                        value={user?.providerData[0]?.email ||
-                                                                            user?.email}
+                                                                        value={
+                                                                            user?.providerData[0]
+                                                                                ?.email ||
+                                                                            user?.email
+                                                                        }
                                                                         disabled
                                                                     />
                                                                 </div>
@@ -169,9 +178,7 @@ console.log(user);
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Phone</p>
-                                                    <h6 className="text-muted f-w-400">
-                                                        {phone}
-                                                    </h6>
+                                                    <h6 className="text-muted f-w-400">{phone}</h6>
                                                 </div>
                                             </div>
                                             <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">
@@ -181,14 +188,12 @@ console.log(user);
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Home</p>
                                                     <h6 className="text-muted f-w-400">
-                                                    {address}
+                                                        {address}
                                                     </h6>
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">School</p>
-                                                    <h6 className="text-muted f-w-400">
-                                                        {school}
-                                                    </h6>
+                                                    <h6 className="text-muted f-w-400">{school}</h6>
                                                 </div>
                                             </div>
                                             <ul className="social-link list-unstyled m-t-40 m-b-10">
