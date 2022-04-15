@@ -44,7 +44,7 @@ const Profile = () => {
 
         new Swal({
             title: "Good job!",
-            text: "Your message successfully sent! Please check your email",
+            text: "Your profile is successfully updated. Please refresh to see update",
             icon: "success",
         });
         e.target.reset();
