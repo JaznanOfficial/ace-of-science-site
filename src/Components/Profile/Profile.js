@@ -32,8 +32,8 @@ const Profile = () => {
         console.log(profile);
 
         fetch(
-            `https://enigmatic-crag-58614.herokuapp.com/profile?email=${user?.providerData[0]?.email || user?.email}`,
-            {
+            `https://warm-citadel-00877.herokuapp.com/profile?email=${user?.providerData[0]?.email || user?.email}`,{
+                mode:'no-cors',
                 method: "PUT",
                 headers: {
                     "content-type": "application/json",
@@ -56,9 +56,10 @@ const Profile = () => {
 
     useEffect(() => {
         fetch(
-            `https://enigmatic-crag-58614.herokuapp.com/profile?email=${user?.providerData[0]?.email || user?.email}`,
-            {
-                headers: {
+            `https://warm-citadel-00877.herokuapp.com/profile?email=${user?.providerData[0]?.email || user?.email}`,{
+                mode:'no-cors',
+            headers: {
+                    
                     authorization: `Bearer ${localStorage.getItem("idToken")}`,
                 },
             }

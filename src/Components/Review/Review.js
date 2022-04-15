@@ -27,7 +27,7 @@ const Review = () => {
         console.log({ name, email, text, rating,photo,profession }); ;
   
 
-        fetch("https://enigmatic-crag-58614.herokuapp.com/review", {
+        fetch("https://warm-citadel-00877.herokuapp.com/review", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

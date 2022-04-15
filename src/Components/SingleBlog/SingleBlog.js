@@ -11,7 +11,7 @@ const SingleBlog = () => {
     const [singleData, setSingleData] = useState([])
     
     useEffect(() => {
-        fetch(`https://enigmatic-crag-58614.herokuapp.com/single-blog/${id}`)
+        fetch(`https://warm-citadel-00877.herokuapp.com/single-blog/${id}`)
             .then(res => res.json())
         .then(data => setSingleData(data))
     }, [])

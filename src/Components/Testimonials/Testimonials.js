@@ -13,7 +13,7 @@ const Testimonials = () => {
     const [ratings, setRatings] = useState([]);
 
     useEffect(() => {
-        fetch("https://enigmatic-crag-58614.herokuapp.com/review")
+        fetch("https://warm-citadel-00877.herokuapp.com/review")
             .then((res) => res.json())
             .then((data) => setRatings(data));
     }, []);
