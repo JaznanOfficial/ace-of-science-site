@@ -33,22 +33,25 @@ const Profile = () => {
 
         fetch(
             `https://warm-citadel-00877.herokuapp.com/profile?email=${user?.providerData[0]?.email || user?.email}`,{
-                mode:'no-cors',
+                
                 method: "PUT",
                 headers: {
                     "content-type": "application/json",
                 },
                 body: JSON.stringify(profile),
             }
-        );
+        )
+            .then(res => {
+                new Swal({
+                    title: "Good job!",
+                    text: "Your profile is successfully updated. Please refresh to see update",
+                    icon: "success",
+                });
+                e.target.reset();
+                handleClose();
+        })
 
-        new Swal({
-            title: "Good job!",
-            text: "Your profile is successfully updated. Please refresh to see update",
-            icon: "success",
-        });
-        e.target.reset();
-        handleClose();
+        
     };
 
     // getting profile data------------------------>
@@ -57,14 +60,20 @@ const Profile = () => {
     useEffect(() => {
         fetch(
             `https://warm-citadel-00877.herokuapp.com/profile?email=${user?.providerData[0]?.email || user?.email}`,{
-                mode:'no-cors',
+               
             headers: {
-                    
                     authorization: `Bearer ${localStorage.getItem("idToken")}`,
                 },
             }
         )
-            .then(res => res.json())
+            .then(res => {
+                if (res.status === 200) {
+                    return res.json();
+                }
+                // else if (res.status === 401) {
+                //     navigate('/sign-in')
+                // }
+            })
             .then(data => setProfileData(data))
     }, []);
     console.log(profileData);

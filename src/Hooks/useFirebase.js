@@ -30,7 +30,10 @@ const useFirebase = () => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 getIdToken(user)
-                .then(idToken=>localStorage.setItem('idToken',idToken))
+                    .then(idToken => {
+                        console.log(idToken)
+                        localStorage.setItem('idToken', idToken)
+                    })
                 setUser(user);
             } else {
                 setUser({});
