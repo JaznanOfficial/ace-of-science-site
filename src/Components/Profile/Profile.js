@@ -32,9 +32,7 @@ const Profile = () => {
         console.log(profile);
 
         fetch(
-            `https://enigmatic-crag-58614.herokuapp.com/${
-                user?.providerData[0]?.email || user?.email
-            }`,
+            `https://enigmatic-crag-58614.herokuapp.com/profile?email=${user?.providerData[0]?.email || user?.email}`,
             {
                 method: "PUT",
                 headers: {
@@ -58,7 +56,7 @@ const Profile = () => {
 
     useEffect(() => {
         fetch(
-            `http://localhost:5000/profile?email=${user?.providerData[0]?.email || user?.email}`,
+            `https://enigmatic-crag-58614.herokuapp.com/profile?email=${user?.providerData[0]?.email || user?.email}`,
             {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem("idToken")}`,
