@@ -67,9 +67,9 @@ const Profile = () => {
             }
         )
             .then(res => {
-                if (res.status === 200) {
+                // if (res.status === 200) {
                     return res.json();
-                }
+                // }
                 // else if (res.status === 401) {
                 //     navigate('/sign-in')
                 // }
