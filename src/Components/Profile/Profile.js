@@ -34,7 +34,7 @@ const Profile = () => {
         
 
         fetch(
-            `http://localhost:5000/profile?uid=${user?.uid}`,{
+            `https://warm-citadel-00877.herokuapp.com/profile?uid=${user?.uid}`,{
                 
                 method: "PUT",
                 headers: {
@@ -61,7 +61,7 @@ const Profile = () => {
 
     useEffect(() => {
         fetch(
-            `http://localhost:5000/profile?uid=${user?.uid}`,{
+            `https://warm-citadel-00877.herokuapp.com/profile?uid=${user?.uid}`,{
                
             headers: {
                     authorization: `Bearer ${localStorage.getItem("idToken")}`,
