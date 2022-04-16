@@ -28,11 +28,13 @@ const Profile = () => {
         const school = schoolRef.current.value;
         const profession = professionRef.current.value;
         const phone = phoneRef.current.value;
-        const profile = { userEmail, address, school, profession, phone };
+        const userUid = user?.uid;
+        const profile = { userUid,userEmail, address, school, profession, phone };
         console.log(profile);
+        
 
         fetch(
-            `https://warm-citadel-00877.herokuapp.com/profile?email=${user?.providerData[0]?.email || user?.email}`,{
+            `http://localhost:5000/profile?uid=${user?.uid}`,{
                 
                 method: "PUT",
                 headers: {
@@ -59,7 +61,7 @@ const Profile = () => {
 
     useEffect(() => {
         fetch(
-            `https://warm-citadel-00877.herokuapp.com/profile?email=${user?.providerData[0]?.email || user?.email}`,{
+            `http://localhost:5000/profile?uid=${user?.uid}`,{
                
             headers: {
                     authorization: `Bearer ${localStorage.getItem("idToken")}`,
@@ -77,7 +79,7 @@ const Profile = () => {
             .then(data => setProfileData(data))
     }, []);
     console.log(profileData);
-    const { address, phone, profession, school } = profileData;
+    const { address, phone, profession, school,userEmail } = profileData;
 
     return (
         <div className="profile">
@@ -119,12 +121,8 @@ const Profile = () => {
                                                                         placeholder="Email"
                                                                         name="address"
                                                                         ref={emailRef}
-                                                                        value={
-                                                                            user?.providerData[0]
-                                                                                ?.email ||
-                                                                            user?.email
-                                                                        }
-                                                                        disabled
+                                                                        
+                                                                        
                                                                     />
                                                                 </div>
                                                             </div>
@@ -180,8 +178,7 @@ const Profile = () => {
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Email</p>
                                                     <h6 className="text-muted f-w-400">
-                                                        {user?.providerData[0]?.email ||
-                                                            user?.email}
+                                                        {userEmail}
                                                     </h6>
                                                 </div>
                                                 <div className="col-sm-6">

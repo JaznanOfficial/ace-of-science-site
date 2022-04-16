@@ -9,7 +9,7 @@ const useFirebase = () => {
     const provider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const facebookProvider = new FacebookAuthProvider();
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState();
     const [isLoading,setIsLoading] = useState(true)
 
     const signinUsingGoogle = () => {
@@ -31,7 +31,7 @@ const useFirebase = () => {
             if (user) {
                 getIdToken(user)
                     .then(idToken => {
-                        console.log(idToken)
+                        // console.log(idToken)
                         localStorage.setItem('idToken', idToken)
                     })
                 setUser(user);

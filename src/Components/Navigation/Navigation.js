@@ -29,7 +29,7 @@ const Navigation = () => {
                             {user?.auth && <Link to="/review">Review us</Link>}
 
                             {user?.auth ? (
-                                <Link to={`/profile?email=${user?.providerData[0]?.email || user?.email}`} className="m-2 border-2">
+                                <Link to={`/profile?uid=${user?.uid}`} className="m-2 border-2">
                                     <img src={user.photoURL} className="user-img"></img>
                                 </Link>
                             ) : (
