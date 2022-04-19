@@ -127,7 +127,7 @@ const Review = () => {
                     </div>
                 </div>
             </div>
-            input
+
         </div>
     );
 };
