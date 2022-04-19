@@ -52,7 +52,7 @@ const Review = () => {
         <div className="review">
             <div className="container d-lg-flex flex-row justify-content-between align-items-center my-5">
                 <div className="review-img">
-                    <img src={review} alt="img not found" width="380px" />
+                    <img src={review} alt="img not found" width="340px" />
                 </div>
                 <div>
                     <div className="column right w-100 my-5">
