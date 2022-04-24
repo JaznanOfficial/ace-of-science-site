@@ -1,18 +1,19 @@
 .single-blog{
     /* border: 2px solid crimson; */
-    width: 90% !important;
-    height: 40rem !important;
+    width: 70% !important;
+    /* height: 60rem !important; */
 }
 
 .single-blog img{
-    width: 40rem;
+    width: 100% !important;
+    margin: 10px auto;
 }
 
 
 
 @media only screen and (max-width: 520px) {
     .single-blog img{
-        width: 80% !important;
+        width: 100% !important;
     }
     .single-blog{
         margin: 20px 10px !important;

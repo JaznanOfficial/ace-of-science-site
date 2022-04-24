@@ -1,9 +1,10 @@
 .blog-card{
-  height: 5rem !important;
+  height: 40rem !important;
 }
 .blog-card img{
   width: 300px !important;
   border-radius: 10px !important;
+  margin: 0 auto !important;
 }
 .see-more{
     color: brown !important;
@@ -47,10 +48,12 @@
   .swiper-image{
       width: 200px !important;
   }
-/* 
+
   @media only screen and (max-width:480px){
-    .swiper-image{
-        width: 320px !important;
+    .blog-card img{
+      width: 280px !important;
+      border-radius: 10px !important;
+      margin: 0 auto !important;
     }
-  } */
+  }
   
