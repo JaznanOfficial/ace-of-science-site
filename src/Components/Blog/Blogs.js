@@ -46,7 +46,7 @@ const Blogs = () => {
                         const content = blog.content
                         console.log(content);
                         return <Col>
-                        <Card className="shadow">
+                        <Card className="shadow blog-card">
                                 
                             <Card.Body dangerouslySetInnerHTML={{
                                 __html: content
