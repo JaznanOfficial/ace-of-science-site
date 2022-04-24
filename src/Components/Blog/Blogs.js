@@ -30,44 +30,7 @@ const Blogs = () => {
     return (
         <div className="container my-5">
         <ScrollToTop smooth color="#FE1A00" viewBox="0 0 250 250" />
-            {
-                // <div className="my-5 h-100">
-            //     <h1 className="text-danger">Featured Blog</h1>
-
-            //     <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-            //         <Row xs={1} md={2} className="g-4">
-            //             {Array.from({ length: 4 }).map((_, idx) => (
-            //                 <SwiperSlide>
-            //                     <Card className="d-lg-flex flex-lg-row justify-content-center align-items-center p-3 text-start ">
-            //                         <div>
-            //                             <img
-            //                                 src="https://thumbs.dreamstime.com/b/freedom-concept-silhouettes-broken-chain-birds-flying-sky-180470108.jpg"
-            //                                 className="swiper-image rounded"
-            //                                 alt="img not found"
-            //                             />
-            //                         </div>
-            //                         <div>
-            //                             <Card.Body>
-            //                                 <Card.Title>Card title</Card.Title>
-            //                                 <Card.Text>
-            //                                     This is a longer card with supporting text below as
-            //                                     a natural lead-in to additional content. This
-            //                                     content is a little bit longer.
-            //                                 </Card.Text>
-            //                             </Card.Body>
-            //                         </div>
-            //                         <strong className="mb-3 text-center">
-            //                             <a href="#" className="see-more">
-            //                                 See More <i className="fas fa-arrow-circle-right"></i>{" "}
-            //                             </a>
-            //                         </strong>
-            //                     </Card>
-            //                 </SwiperSlide>
-            //             ))}
-            //         </Row>
-            //     </Swiper>
-            // </div>
-        }
+            
 
             <h1 className="text-danger">Blogs</h1>
 
@@ -79,26 +42,27 @@ const Blogs = () => {
                 <Row xs={1} md={3} className="g-4">
                 {
                     
-                    reverseBlogs.map(blog => <Col>
-                            <Card className="shadow">
-                                <Card.Img
-                                    variant="top"
-                                    src={blog.imageLink}
-                                    className="m-3"
-                                />
-                                <Card.Body>
-                                    <h3 className="text-danger">{blog.heading}</h3>
-                                    <Card.Text>
-                                        {blog.text.slice(0, 200)}...
-                                    </Card.Text>
-                                </Card.Body>
+                    reverseBlogs.map(blog => {
+                        const content = blog.content
+                        console.log(content);
+                        return <Col>
+                        <Card className="shadow">
+                                
+                            <Card.Body dangerouslySetInnerHTML={{
+                                __html: content
+                            }} className='overflow-hidden pb-3'>
+                                    
+                            </Card.Body>
+                                <Card.Footer>
                                 <strong className="mb-3">
-                                    <Link to={`/single-blog/${blog._id}`} className="see-more">
-                                        See More <i className="fas fa-arrow-circle-right"></i>{" "}
-                                    </Link>
-                                </strong>
-                            </Card>
-                        </Col>)
+                                <Link to={`/single-blog/${blog._id}`} className="see-more">
+                                    See More <i className="fas fa-arrow-circle-right"></i>{" "}
+                                </Link>
+                            </strong>
+                                </Card.Footer>
+                        </Card>
+                    </Col>
+                    })
                     }
                     
             </Row>

@@ -1,6 +1,9 @@
-.card-img-top{
-    width: 90% !important;
-    border-radius: 10px !important;
+.shadow{
+  height: 45rem !important;
+}
+.shadow img{
+  width: 300px !important;
+  border-radius: 10px !important;
 }
 .see-more{
     color: brown !important;

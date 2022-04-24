@@ -20,23 +20,14 @@ const SingleBlog = () => {
  
 
 
-    const {imageLink, heading, text} = singleData ||{}
+    const {content} = singleData ||{}
 
 
     return (
-        <div className="single-blog px-3 mx-auto">
-            <div className="image-div mb-5 p-0">
-                <img
-                    src={imageLink}
-                    alt=""
-                />
-            </div>
-            <div>
-                <h1 className="text-danger">{heading}</h1>
-                <p className="text-start fs-5 fw-700">
-                   {text}
-                </p>
-            </div>
+        <div className="single-blog container border border-rounded my-3" dangerouslySetInnerHTML={{
+            __html:  content
+        }}>
+            
         </div>
     );
 };
