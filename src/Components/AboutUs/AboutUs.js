@@ -5,20 +5,17 @@ import { Card, Col, Row } from "react-bootstrap";
 const AboutUs = () => {
     return (
         <div>
-            <div class="bg-light">
+            <div class="">
                 <div class="container py-5">
                     <div class="row h-100 align-items-center py-5">
                         <div class="col-lg-6">
-                            <h1 class="display-4">About us page</h1>
+                            <h1 class="display-4 text-danger">About us</h1>
                             <p class="lead text-muted mb-0">
-                                Create a minimal about us page using Bootstrap 4.
+                                Welcome to growing kingdom of science
                             </p>
-                            <p class="lead text-muted">
-                                Snippet by{" "}
-                                <a href="https://bootstrapious.com/snippets" class="text-muted">
-                                    <u>Bootstrapious</u>
-                                </a>
-                            </p>
+                            <h3 class="text-secondary">
+                               Ace Of Science
+                            </h3>
                         </div>
                         <div class="col-lg-6 d-none d-lg-block">
                             <img
@@ -41,7 +38,10 @@ const AboutUs = () => {
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
-                            <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">
+                            <a
+                                href="#"
+                                class="btn btn-light px-5 rounded-pill shadow-sm text-light"
+                            >
                                 Learn More
                             </a>
                         </div>
@@ -68,7 +68,10 @@ const AboutUs = () => {
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
-                            <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">
+                            <a
+                                href="#"
+                                class="btn btn-light px-5 rounded-pill shadow-sm text-light"
+                            >
                                 Learn More
                             </a>
                         </div>
@@ -78,9 +81,9 @@ const AboutUs = () => {
 
             <div class="bg-light py-5">
                 <div class="container py-5">
-                    <div class="row mb-4">
+                    <div class="row mb-4 justify-content-center align-items-center">
                         <div class="col-lg-5">
-                            <h2 class="display-4 font-weight-light">Our team</h2>
+                            <h2 class="display-4 font-weight-light text-danger">Our team</h2>
                             <p class="font-italic text-muted">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             </p>
@@ -89,7 +92,7 @@ const AboutUs = () => {
 
                     <div className="d-flex justify-content-center align-items-center">
                         <div class="ceo-div col-xl-3 col-sm-12 mb-5">
-                            <div class="bg-white rounded shadow-sm py-5 px-4">
+                            <div class="bg-white rounded shadow-lg py-5 px-4">
                                 <img
                                     src="https://bootstrapious.com/i/snippets/sn-about/avatar-4.png"
                                     alt=""
@@ -104,14 +107,10 @@ const AboutUs = () => {
                                             <i class="fa fa-facebook-f"></i>
                                         </a>
                                     </li>
+
                                     <li class="list-inline-item">
                                         <a href="#" class="social-link">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="#" class="social-link">
-                                            <i class="fa fa-instagram"></i>
+                                            <i class="fa-solid fa-at"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
@@ -126,7 +125,7 @@ const AboutUs = () => {
 
                     <div class="row text-center justify-content-center align-items-center">
                         <div class="col-xl-3 col-sm-6 mb-5">
-                            <div class="bg-white rounded shadow-sm py-5 px-4">
+                            <div class="bg-white rounded shadow-lg py-5 px-4">
                                 <img
                                     src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png"
                                     alt=""
@@ -141,14 +140,10 @@ const AboutUs = () => {
                                             <i class="fa fa-facebook-f"></i>
                                         </a>
                                     </li>
+
                                     <li class="list-inline-item">
                                         <a href="#" class="social-link">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="#" class="social-link">
-                                            <i class="fa fa-instagram"></i>
+                                            <i class="fa-solid fa-at"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
@@ -161,7 +156,7 @@ const AboutUs = () => {
                         </div>
 
                         <div class="col-xl-3 col-sm-6 mb-5">
-                            <div class="bg-white rounded shadow-sm py-5 px-4">
+                            <div class="bg-white rounded shadow-lg py-5 px-4">
                                 <img
                                     src="https://bootstrapious.com/i/snippets/sn-about/avatar-2.png"
                                     alt=""
@@ -176,14 +171,10 @@ const AboutUs = () => {
                                             <i class="fa fa-facebook-f"></i>
                                         </a>
                                     </li>
+
                                     <li class="list-inline-item">
                                         <a href="#" class="social-link">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="#" class="social-link">
-                                            <i class="fa fa-instagram"></i>
+                                            <i class="fa-solid fa-at"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
@@ -196,7 +187,7 @@ const AboutUs = () => {
                         </div>
 
                         <div class="col-xl-3 col-sm-6 mb-5">
-                            <div class="bg-white rounded shadow-sm py-5 px-4">
+                            <div class="bg-white rounded shadow-lg py-5 px-4">
                                 <img
                                     src="https://bootstrapious.com/i/snippets/sn-about/avatar-1.png"
                                     alt=""
@@ -211,14 +202,10 @@ const AboutUs = () => {
                                             <i class="fa fa-facebook-f"></i>
                                         </a>
                                     </li>
+
                                     <li class="list-inline-item">
                                         <a href="#" class="social-link">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="#" class="social-link">
-                                            <i class="fa fa-instagram"></i>
+                                            <i class="fa-solid fa-at"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
