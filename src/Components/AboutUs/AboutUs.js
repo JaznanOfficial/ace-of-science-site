@@ -77,7 +77,7 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            <div class="bg-light py-5">
+            <div class="team bg-light py-5">
                 <div class="container py-5">
                     <div class="row mb-4 justify-content-center align-items-center">
                         <div class="col-lg-5">

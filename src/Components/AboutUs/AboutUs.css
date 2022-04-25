@@ -1,3 +1,9 @@
+.team img{
+  width: 130px;
+  height: 120px;
+  border-radius: 50%;
+}
+
 .social-link {
     width: 30px;
     height: 30px;
