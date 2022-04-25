@@ -24,6 +24,7 @@ const Navigation = () => {
                         <Nav className="ms-auto justify-content-center align-items-center">
                             <Link to="/">Home</Link>
                             <Link to="blog">Blog</Link>
+                            <Link to="notes">Notes</Link>
                             <Link to="contact">Contact</Link>
                             <Link to='about'>About Us</Link>
                             {user?.auth && <Link to="/review">Review us</Link>}

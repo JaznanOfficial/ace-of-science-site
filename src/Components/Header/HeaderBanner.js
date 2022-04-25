@@ -15,9 +15,11 @@ const HeaderBanner = () => {
             LEARN MORE ABOUT <br />
             SCIENCE AND MAKE <br /> SUCCESS THE RESULT OF PERFECTION.
           </h1>
+          <a href="#category">
           <Button className="mt-3">
             <h5 className="m-0">Let's begin</h5>
           </Button>
+          </a>
         </div>
       </div>
     </div>

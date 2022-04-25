@@ -18,6 +18,7 @@ import AuthProvider from "./Contexts/AuthProvider";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import SingleBlog from "./Components/SingleBlog/SingleBlog";
 import AboutUs from "./Components/AboutUs/AboutUs";
+import Notes from "./Components/Notes/Notes";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
                         <Route path="blog" element={<Blogs></Blogs>}></Route>
                         <Route path="contact" element={<Contact></Contact>}></Route>
                         <Route path="about" element={<AboutUs/>}></Route>
+                        <Route path="notes" element={<Notes/>}></Route>
                         <Route path="skills" element={<Skills />}></Route>
                         <Route path="others" element={<Skills />}></Route>
 

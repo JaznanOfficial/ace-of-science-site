@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Category = () => {
   return (
-    <div className="container my-5">
+    <div className="container my-5" id="category">
       <div className="text-start mb-4">
         {" "}
         <h1>Choice classes from categories</h1>
