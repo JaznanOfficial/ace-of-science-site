@@ -13,9 +13,7 @@ const AboutUs = () => {
                             <p class="lead text-muted mb-0">
                                 Welcome to growing kingdom of science
                             </p>
-                            <h3 class="text-secondary">
-                               Ace Of Science
-                            </h3>
+                            <h3 class="text-secondary">Ace Of Science</h3>
                         </div>
                         <div class="col-lg-6 d-none d-lg-block">
                             <img
@@ -127,27 +125,41 @@ const AboutUs = () => {
                         <div class="col-xl-3 col-sm-6 mb-5">
                             <div class="bg-white rounded shadow-lg py-5 px-4">
                                 <img
-                                    src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png"
+                                    src="https://i.ibb.co/mcv87Fb/profile-1-removebg-preview-2.png"
                                     alt=""
                                     width="100"
                                     class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                                 />
-                                <h5 class="mb-0">Samuel Hardy</h5>
-                                <span class="small text-uppercase text-muted">CEO - Founder</span>
+                                <h5 class="mb-0">Md Abdur Rahman</h5>
+                                <span class="small text-uppercase text-muted">
+                                    Lead Developer of AOS
+                                </span>
                                 <ul class="social mb-0 list-inline mt-3">
                                     <li class="list-inline-item">
-                                        <a href="#" class="social-link">
+                                        <a
+                                            href="https://www.facebook.com/mdabdurrahman30/"
+                                            target="_blank"
+                                            class="social-link"
+                                        >
                                             <i class="fa fa-facebook-f"></i>
                                         </a>
                                     </li>
 
                                     <li class="list-inline-item">
-                                        <a href="#" class="social-link">
+                                        <a
+                                            href="mailto:jaznanofficial@gmail.com"
+                                            target='_blank'
+                                            class="social-link"
+                                        >
                                             <i class="fa-solid fa-at"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="#" class="social-link">
+                                        <a
+                                            href="https://www.linkedin.com/in/jaznanofficial/"
+                                            target='_blank'
+                                            class="social-link"
+                                        >
                                             <i class="fa fa-linkedin"></i>
                                         </a>
                                     </li>
@@ -189,7 +201,7 @@ const AboutUs = () => {
                         <div class="col-xl-3 col-sm-6 mb-5">
                             <div class="bg-white rounded shadow-lg py-5 px-4">
                                 <img
-                                    src="https://bootstrapious.com/i/snippets/sn-about/avatar-1.png"
+                                    src="https://i.ibb.co/JrgML6V/278980530-519026103066319-8309659636507363290-n.jpg"
                                     alt=""
                                     width="100"
                                     class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
@@ -198,18 +210,18 @@ const AboutUs = () => {
                                 <span class="small text-uppercase text-muted">CEO - Founder</span>
                                 <ul class="social mb-0 list-inline mt-3">
                                     <li class="list-inline-item">
-                                        <a href="#" class="social-link">
+                                        <a href="https://www.facebook.com/hasibnadimx" target='_blank' class="social-link">
                                             <i class="fa fa-facebook-f"></i>
                                         </a>
                                     </li>
 
                                     <li class="list-inline-item">
-                                        <a href="#" class="social-link">
+                                        <a href="mailto:hasibnadim0@gmail.com" target='_blank' class="social-link">
                                             <i class="fa-solid fa-at"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="#" class="social-link">
+                                        <a href="https://github.com/hasibnadim" target='_blank' class="social-link">
                                             <i class="fa fa-linkedin"></i>
                                         </a>
                                     </li>
