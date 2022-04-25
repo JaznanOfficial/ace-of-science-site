@@ -25,7 +25,7 @@ const Navigation = () => {
                             <Link to="/">Home</Link>
                             <Link to="blog">Blog</Link>
                             <Link to="contact">Contact</Link>
-
+                            <Link to='about'>About Us</Link>
                             {user?.auth && <Link to="/review">Review us</Link>}
 
                             {user?.auth ? (

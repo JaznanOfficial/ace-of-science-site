@@ -17,6 +17,7 @@ import Skills from "./Components/Skills/Skills";
 import AuthProvider from "./Contexts/AuthProvider";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import SingleBlog from "./Components/SingleBlog/SingleBlog";
+import AboutUs from "./Components/AboutUs/AboutUs";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                         <Route path="home" element={<HomePage></HomePage>}></Route>
                         <Route path="blog" element={<Blogs></Blogs>}></Route>
                         <Route path="contact" element={<Contact></Contact>}></Route>
+                        <Route path="about" element={<AboutUs/>}></Route>
                         <Route path="skills" element={<Skills />}></Route>
                         <Route path="others" element={<Skills />}></Route>
 
