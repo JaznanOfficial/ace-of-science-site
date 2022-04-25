@@ -206,8 +206,8 @@ const AboutUs = () => {
                                     width="100"
                                     class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                                 />
-                                <h5 class="mb-0">John Tarly</h5>
-                                <span class="small text-uppercase text-muted">CEO - Founder</span>
+                                <h5 class="mb-0">Hasib Nadim</h5>
+                                <span class="small text-uppercase text-muted">Backend Developer</span>
                                 <ul class="social mb-0 list-inline mt-3">
                                     <li class="list-inline-item">
                                         <a href="https://www.facebook.com/hasibnadimx" target='_blank' class="social-link">
@@ -221,7 +221,7 @@ const AboutUs = () => {
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="https://github.com/hasibnadim" target='_blank' class="social-link">
+                                        <a href="https://www.linkedin.com/in/hasibnadim" target='_blank' class="social-link">
                                             <i class="fa fa-linkedin"></i>
                                         </a>
                                     </li>
