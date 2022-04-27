@@ -69,28 +69,28 @@ const AboutUs = () => {
                         <div class="ceo-div col-xl-3 col-sm-12 mb-5">
                             <div class="bg-white rounded shadow-lg py-5 px-4">
                                 <img
-                                    src="https://bootstrapious.com/i/snippets/sn-about/avatar-4.png"
+                                    src="https://i.ibb.co/bJQVT0x/278663867-746682786491458-7016518618669044559-n.jpg"
                                     alt=""
                                     width="100"
                                     class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                                 />
                                 <h5 class="mb-0">Manuella Nevoresky</h5>
-                                <span class="small text-uppercase text-muted">CEO - Founder</span>
+                                <span class="small text-uppercase text-muted">ceo & founder of aos</span>
                                 <ul class="social mb-0 list-inline mt-3">
                                     <li class="list-inline-item">
-                                        <a href="" class="social-link">
+                                        <a href="https://www.facebook.com/abdulla.mamun.7311" class="social-link">
                                             <i class="fa fa-facebook-f"></i>
                                         </a>
                                     </li>
 
                                     <li class="list-inline-item">
-                                        <a href="#" class="social-link">
+                                        <a href="aamtusher01@gmail.com" class="social-link">
                                             <i class="fa-solid fa-at"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="#" class="social-link">
-                                            <i class="fa fa-linkedin"></i>
+                                        <a href="https://t.me/AbdullaMamun001" class="social-link">
+                                        <i class="fa-brands fa-telegram"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -147,22 +147,22 @@ const AboutUs = () => {
                         <div class="col-xl-3 col-sm-6 mb-5">
                             <div class="bg-white rounded shadow-lg py-5 px-4">
                                 <img
-                                    src="https://bootstrapious.com/i/snippets/sn-about/avatar-2.png"
+                                    src="https://i.ibb.co/HxBMwQK/249258341-193746306241797-7825219781366502693-n.jpg"
                                     alt=""
                                     width="100"
                                     class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                                 />
-                                <h5 class="mb-0">Tom Sunderland</h5>
-                                <span class="small text-uppercase text-muted">CEO - Founder</span>
+                                <h5 class="mb-0">Shamima Akter</h5>
+                                <span class="small text-uppercase text-muted">MERN Stack Developer</span>
                                 <ul class="social mb-0 list-inline mt-3">
                                     <li class="list-inline-item">
-                                        <a href="#" class="social-link">
+                                        <a href="https://www.facebook.com/nizum.nizum.1481" target='_blank' class="social-link">
                                             <i class="fa fa-facebook-f"></i>
                                         </a>
                                     </li>
 
                                     <li class="list-inline-item">
-                                        <a href="#" class="social-link">
+                                        <a href="mailto:nijumdip019911@gmail.com" class="social-link">
                                             <i class="fa-solid fa-at"></i>
                                         </a>
                                     </li>
