@@ -23,16 +23,16 @@ const SingleNotes = () => {
                         <Col
                     key={notes._id}
                     >
-                        <a href={notes.pdfLink}>
-                        <Card className="overflow-hidden p-1 shadow-lg">
+                        <a href={notes.pdfLink} target='_blank'>
+                        <Card className="overflow-hidden p-1 border shadow">
                         <Card.Body className="d-flex flex-row justify-content-center align-items-center text-decoration-none p-0">
                         <h2>
                             <i class="fa-solid fa-file-pen mx-3 text-danger"></i>
                         </h2>
-                            <p className="me-1">
+                            <h6 className="me-1">
                             {notes.text}
                             
-                            </p>
+                            </h6>
                             </Card.Body>
                         </Card>
                         </a>

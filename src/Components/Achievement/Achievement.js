@@ -1,78 +1,100 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import "./Achievement.css";
 
 const Achievement = () => {
+
+    const [getEvents, setGetEvents] = useState([]);
+    useEffect(() => {
+        fetch("https://warm-citadel-00877.herokuapp.com/event")
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                setGetEvents(data);
+            });
+        }, []);
+
     return (
-        <div className="container my-5">
-            <div className="text-start mb-4">
-                {" "}
-                <h1 className="text-center">Our Events </h1>
-                <h1 className="text-center"><strong className="text-danger">PHOTOGRAPHY CONTEST 2.0</strong></h1>
-            </div>
-            <Row xs={1} md={4} className="g-4">
-                <Col>
-                    <Card>
-                        <img
-                            variant="top"
-                            src="https://thumbs.dreamstime.com/b/creative-concept-businessman-hand-holding-gold-cup-award-icon-winner-prize-goblet-first-place-champion-trophy-creative-concept-112434006.jpg"
-                            width="88%"
-                            height="88%"
-                className="mx-auto my-3 achievement-img"
-                alt="img not found"
-                        />
-                        <Card.Body>
-                            <Card.Title>Achievement-1</Card.Title>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card>
-                        <img
-                            variant="top"
-                            src="https://thumbs.dreamstime.com/b/creative-concept-businessman-hand-holding-gold-cup-award-icon-winner-prize-goblet-first-place-champion-trophy-creative-concept-112434006.jpg"
-                            width="88%"
-                            height="88%"
-                className="mx-auto my-3 achievement-img"
-                alt="img not found"
-                        />
-                        <Card.Body>
-                            <Card.Title>Achievement-2</Card.Title>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card>
-                        <img
-                            variant="top"
-                            src="https://thumbs.dreamstime.com/b/creative-concept-businessman-hand-holding-gold-cup-award-icon-winner-prize-goblet-first-place-champion-trophy-creative-concept-112434006.jpg"
-                            width="88%"
-                            height="88%"
-                className="mx-auto my-3 achievement-img"
-                alt="img not found"
-                        />
-                        <Card.Body>
-                            <Card.Title>Achievement-3</Card.Title>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card>
-                        <img
-                            variant="top"
-                            src="https://thumbs.dreamstime.com/b/creative-concept-businessman-hand-holding-gold-cup-award-icon-winner-prize-goblet-first-place-champion-trophy-creative-concept-112434006.jpg"
-                            width="88%"
-                            height="88%"
-                className="mx-auto my-3 achievement-img"
-                alt="img not found"
-                        />
-                        <Card.Body>
-                            <Card.Title>Achievement-4</Card.Title>
-                        </Card.Body>
-                    </Card>
-                </Col>
-              
-            </Row>
+        <div className="container my-5 achievement">
+            {
+                getEvents.map(event => <div>
+                    <div className="text-start mb-4">
+                    {" "}
+                    <h1 className="text-center">Our Events </h1>
+                    <h1 className="text-center">
+                        <strong className="text-danger">{event.heading}</strong>
+                    </h1>
+                </div>
+                <Row xs={1} md={4} className="g-4">
+                    
+                            <Col>
+                            <Card className="px-2">
+                                <img
+                                    variant="top"
+                                    src={event.firstImage}
+                                    className="mx-auto my-2 achievement-img"
+                                    alt="img not found"
+
+                                />
+                                {/*  <Card.Body>
+                                    <Card.Title>Achievement-1</Card.Title>
+                                </Card.Body> */}
+                            </Card>
+                        </Col>
+                        <Col>
+                            <Card className="px-2">
+                                <img
+                                    variant="top"
+                                    src={event.secondImage}
+                                    className="mx-auto my-2 achievement-img"
+                                    alt="img not found"
+                                    width="88%"
+                                    height="88%"
+                                />
+                                {/*  <Card.Body>
+                                    <Card.Title>Achievement-1</Card.Title>
+                                </Card.Body> */}
+                            </Card>
+                        </Col>
+                        <Col>
+                            <Card className="px-2">
+                                <img
+                                    variant="top"
+                                    src={event.thirdImage}
+                                    className="mx-auto my-2 achievement-img"
+                                    alt="img not found"
+                                    width="88%"
+                                    height="88%"
+                                />
+                                {/*  <Card.Body>
+                                    <Card.Title>Achievement-1</Card.Title>
+                                </Card.Body> */}
+                            </Card>
+                        </Col>
+                        <Col>
+                            <Card className="px-2">
+                                <img
+                                    variant="top"
+                                    src={event.fourthImage}
+                                    className="mx-auto my-2 achievement-img"
+                                    alt="img not found"
+                                    width="88%"
+                                    height="88%"
+                                />
+                                {/*  <Card.Body>
+                                    <Card.Title>Achievement-1</Card.Title>
+                                </Card.Body> */}
+                            </Card>
+                        </Col>
+                     
+                       
+                            
+                    
+       
+                    </Row>
+                    
+                </div>)
+            }
         </div>
     );
 };

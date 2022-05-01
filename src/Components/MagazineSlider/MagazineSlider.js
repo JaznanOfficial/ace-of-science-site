@@ -29,6 +29,7 @@ const MagazineSlider = () => {
                 <div className="container d-flex justify-content-center align-items-center">
                     <div className="magazine-title px-3 mb-3 text-start">
                         <h1>Latest Magazine</h1>
+                        <h6>Coming soon...</h6>
                     </div>
                 </div>
 
@@ -65,14 +66,14 @@ const MagazineSlider = () => {
                     modules={[EffectCoverflow, Pagination]}
                     className="mySwiper"
                 >
-                    <SwiperSlide className="swiper-slide">
+                    {/* <SwiperSlide className="swiper-slide">
                         <a href="logo512.png" download>
                             <img
                                 src="https://i.ibb.co/b75jrgN/screencapture-jaznanofficial-github-io-mouse-food-house-2022-01-17-09-21-51.png"
                                 height={"300px"}
                             />
                         </a>
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                     <SwiperSlide>
                         <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
                     </SwiperSlide>

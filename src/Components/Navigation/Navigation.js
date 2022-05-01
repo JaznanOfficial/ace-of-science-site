@@ -23,7 +23,7 @@ const Navigation = () => {
                     <Navbar.Collapse id="responsive-navbar-nav justify-content-between">
                         <Nav className="ms-auto justify-content-center align-items-center">
                             <Link to="/">Home</Link>
-                            <Link to="blog">Blog</Link>
+                            <Link to="blog">Blogs</Link>
                             <Link to="notes">Notes</Link>
                             <Link to="contact">Contact</Link>
                             <Link to='about'>About Us</Link>

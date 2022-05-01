@@ -38,17 +38,16 @@ const AboutUs = () => {
                         </div>
                         <div class="col-lg-6">
                             <i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
-                            <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
-                            <p class="font-italic text-muted mb-4">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            <h2 class="font-weight-light text-danger">AOS: Begin the journey</h2>
+                            <p class="font-italic text-muted mb-4 text-start">
+                            Hey there, 
+                            I am Abdulla Al Mamun Tusher. I would like to describe myself as an undergraduate student at the University of Chittagong. As a student of theoretical Physics,CU has taught me a lot. 
+                            My journey of Chittagong started in 2019. This was a remarkable year for me. Back then  I got a chance to teach secondary and higher secondary students in a coaching center for the first time. From then on I realized that I have a great power of interacting with people and they could understand my lectures easily. Through the coaching center, I have noticed that most of the students having hard times learning and understanding various topics, so I thought to myself, I should use my talent here. I strongly believe, memorizing the answers to get good grades is draining of our merit, the learning process shouldn't be like that.  <br /><br />
+                            
+                            So, I decided to start a platform called "Ace of Science -AOS " in order to provide quality education by developing a true interest in learning science. Alhamdulillah, this platform enhancing day by day. Numerous students from all over Bangladesh are connecting with us. That's why it is our motto, "Feel free to learn, spread what you have learned". 
+                            In-sa-Allah the medium of learning and teaching will be easier with us.......
                             </p>
-                            <a
-                                href="#"
-                                class="btn btn-light px-5 rounded-pill shadow-sm text-light"
-                            >
-                                Learn More
-                            </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -74,7 +73,7 @@ const AboutUs = () => {
                                     width="100"
                                     class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                                 />
-                                <h5 class="mb-0">Manuella Nevoresky</h5>
+                                <h5 class="mb-0">Abdullah al Mamun Tushar</h5>
                                 <span class="small text-uppercase text-muted">ceo & founder of aos</span>
                                 <ul class="social mb-0 list-inline mt-3">
                                     <li class="list-inline-item">
