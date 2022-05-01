@@ -73,7 +73,7 @@ const AboutUs = () => {
                                     width="100"
                                     class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                                 />
-                                <h5 class="mb-0">Abdullah al Mamun Tushar</h5>
+                                <h5 class="mb-0">Abdulla Al Mamun Tusher</h5>
                                 <span class="small text-uppercase text-muted">ceo & founder of aos</span>
                                 <ul class="social mb-0 list-inline mt-3">
                                     <li class="list-inline-item">
