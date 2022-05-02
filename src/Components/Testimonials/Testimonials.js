@@ -8,6 +8,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Pagination } from "swiper";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Testimonials = () => {
     const [ratings, setRatings] = useState([]);
@@ -18,9 +20,14 @@ const Testimonials = () => {
             .then((data) => setRatings(data));
     }, []);
    
+  
+    useEffect(() => {
+      AOS.init();
+      AOS.refresh();
+    }, []);
 
     return (
-        <div className="mt-5">
+        <div className="mt-5" data-aos="zoom-in-up">
             <section className="home-testimonial p-5">
                 <h2 className="pt-5 mb-3">Explore the students experience</h2>
 

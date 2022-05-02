@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./AboutUs.css";
 import { Card, Col, Row } from "react-bootstrap";
+import aboutSvg from './about.svg'
+import aboutTwo from './about-two.svg'
 
 const AboutUs = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
     return (
         <div>
             <div class="">
@@ -17,7 +25,7 @@ const AboutUs = () => {
                         </div>
                         <div class="col-lg-6 d-none d-lg-block">
                             <img
-                                src="https://bootstrapious.com/i/snippets/sn-about/illus.png"
+                                src={aboutSvg}
                                 alt=""
                                 class="img-fluid"
                             />
@@ -26,12 +34,12 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            <div class="bg-white py-5">
+            <div class="bg-white py-5" data-aos="zoom-out-right">
                 <div class="container py-5">
                     <div class="row align-items-center">
                         <div class="col-lg-5 px-5 mx-auto">
                             <img
-                                src="https://bootstrapious.com/i/snippets/sn-about/img-2.jpg"
+                                src={aboutTwo}
                                 alt=""
                                 class="img-fluid mb-4 mb-lg-0"
                             />
@@ -53,13 +61,14 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            <div class="team bg-light py-5">
+            <div class="team bg-light py-5" data-aos="fade-up"
+            data-aos-duration="3000">
                 <div class="container py-5">
                     <div class="row mb-4 justify-content-center align-items-center">
                         <div class="col-lg-5">
-                            <h2 class="display-4 font-weight-light text-danger">Our team</h2>
+                            <h2 class="display-4 font-weight-light text-danger">Meet Our team</h2>
                             <p class="font-italic text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <hr className="text-danger fs-1 fw-bolder" />
                             </p>
                         </div>
                     </div>

@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import "./Achievement.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Achievement = () => {
 
@@ -12,10 +14,15 @@ const Achievement = () => {
                 console.log(data);
                 setGetEvents(data);
             });
-        }, []);
+    }, []);
+    
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
 
     return (
-        <div className="container my-5 achievement">
+        <div className="container my-5 achievement" data-aos="fade-right">
             {
                 getEvents.map(event => <div>
                     <div className="text-start mb-4">

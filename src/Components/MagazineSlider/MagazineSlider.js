@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MagazineSlider.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,6 +12,8 @@ import "swiper/css/pagination";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
 import { Button } from "react-bootstrap";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MagazineSlider = () => {
     // const responsive = {
@@ -23,8 +25,12 @@ const MagazineSlider = () => {
     //     }
     // }
 
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
     return (
-        <div className="my-3 magazine py-5 d-flex justify-content-center align-items-center">
+        <div className="my-3 magazine py-5 d-flex justify-content-center align-items-center" data-aos="fade-left">
             <div className="container">
                 <div className="container d-flex justify-content-center align-items-center">
                     <div className="magazine-title px-3 mb-3 text-start">
