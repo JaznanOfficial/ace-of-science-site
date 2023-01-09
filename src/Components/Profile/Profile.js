@@ -29,57 +29,47 @@ const Profile = () => {
         const profession = professionRef.current.value;
         const phone = phoneRef.current.value;
         const userUid = user?.uid;
-        const profile = { userUid,userEmail, address, school, profession, phone };
+        const profile = { userUid, userEmail, address, school, profession, phone };
         console.log(profile);
-        
 
-        fetch(
-            `https://warm-citadel-00877.herokuapp.com/profile?uid=${user?.uid}`,{
-                
-                method: "PUT",
-                headers: {
-                    "content-type": "application/json",
-                },
-                body: JSON.stringify(profile),
-            }
-        )
-            .then(res => {
-                new Swal({
-                    title: "Good job!",
-                    text: "Your profile is successfully updated. Please refresh to see update",
-                    icon: "success",
-                });
-                e.target.reset();
-                handleClose();
-        })
-
-        
+        fetch(`https://aos-server.onrender.com/profile?uid=${user?.uid}`, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(profile),
+        }).then((res) => {
+            new Swal({
+                title: "Good job!",
+                text: "Your profile is successfully updated. Please refresh to see update",
+                icon: "success",
+            });
+            e.target.reset();
+            handleClose();
+        });
     };
 
     // getting profile data------------------------>
     const [profileData, setProfileData] = useState({});
 
     useEffect(() => {
-        fetch(
-            `https://warm-citadel-00877.herokuapp.com/profile?uid=${user?.uid}`,{
-               
+        fetch(`https://aos-server.onrender.com/profile?uid=${user?.uid}`, {
             headers: {
-                    authorization: `Bearer ${localStorage.getItem("idToken")}`,
-                },
-            }
-        )
-            .then(res => {
+                authorization: `Bearer ${localStorage.getItem("idToken")}`,
+            },
+        })
+            .then((res) => {
                 // if (res.status === 200) {
-                    return res.json();
+                return res.json();
                 // }
                 // else if (res.status === 401) {
                 //     navigate('/sign-in')
                 // }
             })
-            .then(data => setProfileData(data))
+            .then((data) => setProfileData(data));
     }, []);
     console.log(profileData);
-    const { address, phone, profession, school,userEmail } = profileData;
+    const { address, phone, profession, school, userEmail } = profileData;
 
     return (
         <div className="profile">
@@ -121,8 +111,6 @@ const Profile = () => {
                                                                         placeholder="Email"
                                                                         name="address"
                                                                         ref={emailRef}
-                                                                        
-                                                                        
                                                                     />
                                                                 </div>
                                                             </div>

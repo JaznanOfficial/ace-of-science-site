@@ -15,7 +15,7 @@ const Testimonials = () => {
     const [ratings, setRatings] = useState([]);
 
     useEffect(() => {
-        fetch("https://warm-citadel-00877.herokuapp.com/review")
+        fetch("https://aos-server.onrender.com/review")
             .then((res) => res.json())
             .then((data) => setRatings(data));
     }, []);
@@ -30,8 +30,8 @@ const Testimonials = () => {
             <section className="home-testimonial p-5">
                 <h2 className="pt-5 mb-3">Explore the students experience</h2>
 
-          <Swiper
-          data-aos="zoom-in-up"
+                <Swiper
+                    data-aos="zoom-in-up"
                     breakpoints={{
                         // when window width is >= 640px
                         640: {

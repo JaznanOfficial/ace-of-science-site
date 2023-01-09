@@ -5,7 +5,6 @@ import "./Review.css";
 import useAuth from "../../Hooks/useAuth";
 import review from "./review.svg";
 
-
 const Review = () => {
     const { user } = useAuth();
     const nameRef = useRef();
@@ -13,8 +12,7 @@ const Review = () => {
     const textRef = useRef();
     const ratingRef = useRef();
     const professionRef = useRef();
-    
-    
+
     const reviewHandler = (e) => {
         e.preventDefault();
         const name = nameRef.current.value;
@@ -23,30 +21,24 @@ const Review = () => {
         const text = textRef.current.value;
         var rating = ratingRef.current.state.value;
         const photo = user.photoURL;
-        const review = { name, email, text, rating,photo,profession };
-        console.log({ name, email, text, rating,photo,profession }); ;
-  
+        const review = { name, email, text, rating, photo, profession };
+        console.log({ name, email, text, rating, photo, profession });
 
-        fetch("https://warm-citadel-00877.herokuapp.com/review", {
+        fetch("https://aos-server.onrender.com/review", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
             },
             body: JSON.stringify(review),
-        })
-        .then(res => {
+        }).then((res) => {
             new Swal({
                 title: "Good job!",
                 text: "Your review successfully sent! Please stay with us",
                 icon: "success",
             });
             e.target.reset();
-            
-        })
+        });
         // window.location.reload()
-        
-        
-     
     };
     return (
         <div className="review">
@@ -68,7 +60,7 @@ const Review = () => {
                                         required
                                     />
                                 </div>
-                                
+
                                 <div className="field email">
                                     <input
                                         type="email"
@@ -78,17 +70,16 @@ const Review = () => {
                                         required
                                     />
                                 </div>
-                                
                             </div>
                             <div className="field email">
-                                    <input
-                                        type="text"
-                                        placeholder="Profession"
-                                        name="profession"
-                                        ref={professionRef}
-                                        required
-                                    />
-                                </div>
+                                <input
+                                    type="text"
+                                    placeholder="Profession"
+                                    name="profession"
+                                    ref={professionRef}
+                                    required
+                                />
+                            </div>
 
                             <div className="field textarea">
                                 <textarea
@@ -127,7 +118,6 @@ const Review = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
